@@ -1,11 +1,11 @@
 // Tribonacci Sequence
 function tribonacci(signature,n){
   //your code here
-  let tribon = signature;
+  let arr = signature;
   
   for (i = 3; i < n; i++) {
-    tribon.push(tribon[i - 1] + tribon[i - 2] + tribon[i - 3]);
+    arr.push(arr[i - 1] + arr[i - 2] + arr[i - 3]);
   }
   
-  return tribon.slice(0, n);
+  return arr.slice(0, n);
 }

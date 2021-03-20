@@ -6,11 +6,15 @@ function XO(str) {
   
   for (let i = 0; i < str.length; i++) {
     if (str[i].toLowerCase() === "x") {
-      x++;
+      x.push(str[i]);
     } else if (str[i].toLowerCase() === "o") {
-      o++;
+      o.push(str[i]);
     }
   }
   
-  return x === o;
+  if (x.length === o.length) {
+    return true;
+  } else {
+    return false;
+  }
 }

@@ -12,3 +12,7 @@ function findNextSquare(sq) {
   
     return nextSquare * nextSquare;
 }
+
+
+
+// The ternary operator solution looks a lot cleaner, and simpler

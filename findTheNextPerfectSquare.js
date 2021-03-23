@@ -22,4 +22,7 @@ function findNextSquare(sq) {
 
 
 // Other solution with ternary operator
-
+function findNextSquare(sq) {
+  var root = Math.sqrt(sq);
+  return root % 1 === 0 ? Math.pow(root + 1, 2) : -1;
+}

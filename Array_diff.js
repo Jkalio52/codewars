@@ -6,7 +6,7 @@ function arrayDiff(a, b) {
 
 
 
-// Other solutions
+// Other solutions...
 function arrayDiff(a, b) {
   let diff = [];
   a = a.toString().split(',').map(Number);
@@ -23,7 +23,7 @@ function arrayDiff(a, b) {
 
 
 
-//.....
+//........
 function arrayDiff(a, b) {
   let diff = [];
   for (let i = 0; i < a.length; i++) {

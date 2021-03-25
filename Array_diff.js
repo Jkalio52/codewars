@@ -1,3 +1,4 @@
+// Simplest solution
 function arrayDiff(a, b) {
   let diff = a.filter(x => b.indexOf(x) === -1)
     return diff;
@@ -5,7 +6,7 @@ function arrayDiff(a, b) {
 
 
 
-//...
+// Other solutions
 function arrayDiff(a, b) {
   let diff = [];
   a = a.toString().split(',').map(Number);

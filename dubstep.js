@@ -10,3 +10,11 @@ function songDecoder(song){
 	  .join(' ')
   );
 }
+
+
+
+// Nice, very short code, simple and easy to read...
+function songDecoder(song){
+  return song.replace(/(WUB)+/g," ").trim()
+}
+

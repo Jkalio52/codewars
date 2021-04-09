@@ -20,3 +20,15 @@ Array.prototype.sameStructureAs = function (other) {
   }
   return true;
 };
+
+
+
+
+
+// Other solution...
+
+Array.prototype.sameStructureAs = function (other) {
+  if (!isArray(other)) return false;
+
+  return this.join("").replace(/[^.,]/g, 1) === other.join("").replace(/[^.,]/g, 1);
+};

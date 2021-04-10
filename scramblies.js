@@ -10,3 +10,4 @@ function scramble(str1, str2) {
 
     return word2.length == 0;
 }
+

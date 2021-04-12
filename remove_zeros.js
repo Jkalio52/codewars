@@ -23,3 +23,18 @@ function removeZeros(array) {
   
   return [...start, ...stop]
 };
+
+
+
+
+
+// Other solutions with .Math() method, clever...
+const removeZeros = array => {
+  for (let i = array.length - 1; i > 0; i--) {
+    if ((array[i] !== 0 && array[i] !== `0`) && (array[i - 1] === 0 || array[i - 1] === `0`)) {
+      [array[i], array[i - 1]] = [array[i - 1], array[i]];
+      i = Math.min(i + 2, array.length);
+    }
+  }
+  return array;
+}

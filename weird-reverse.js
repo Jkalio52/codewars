@@ -2,3 +2,4 @@
 // weirdReverse = i => i.sort(x => 1);
 
 weirdReverse=i=>i.sort(x=>1)
+

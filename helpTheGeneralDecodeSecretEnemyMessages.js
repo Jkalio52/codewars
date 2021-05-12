@@ -26,3 +26,14 @@ device.decode = function (w) {
   
   return solve; 
 };
+
+
+
+// Other solution by firstonline, MaxiimRandob, d@rude1337 -- Very easy to read :)
+device.decode = function (w) {
+  for (j = 0; j < 65; j++){
+    w = device.encode (w)
+  }
+  return w; 
+}
+

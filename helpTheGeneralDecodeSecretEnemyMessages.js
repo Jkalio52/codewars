@@ -37,3 +37,7 @@ device.decode = function (w) {
   return w; 
 }
 
+
+
+// Clean and easy to read solution by 0lexa
+

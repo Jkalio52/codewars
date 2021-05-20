@@ -26,3 +26,18 @@ const Calculator = function() {
     return Number(arr[0])
   };
 };
+
+
+
+// Clever soloution by fr0ggy :)
+const Calculator = function() {
+  this.evaluate = s => {
+    let e=s;
+    const r = /([0-9e.+\-]+) (\*|\/) ([0-9e.+\-]+)/
+    const t = /([0-9e.+\-]+) (\+|\-) ([0-9e.+\-]+)/
+    while (r.test(e)) e=e.replace(r,(_,x,o,y)=>o=='/'?(+x)/(+y):(+x)*(+y))
+    while (t.test(e)) e=e.replace(t,(_,x,o,y)=>o=='-'?(+x)-(+y):(+x)+(+y))
+    return +e
+  }
+};
+

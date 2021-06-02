@@ -43,4 +43,3 @@ const mix = (s1, s2) =>
     .sort((a, b) => b[2] - a[2] || a[1].charCodeAt() - b[1].charCodeAt() || a[0].charCodeAt() - b[0].charCodeAt())
     .map(([a, b, c]) => `${b}:${a.repeat(c)}`).join(`/`);
 
-

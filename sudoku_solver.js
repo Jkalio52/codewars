@@ -63,6 +63,7 @@ function sudoku(puzzle) {
 
 
 
+
 // Other solution...
 function sudoku(a, x=0, y=0) {
     function next(x, y) {

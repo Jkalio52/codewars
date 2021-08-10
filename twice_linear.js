@@ -20,7 +20,6 @@ function dblLinear(n) {
 
 
 
-
 // Solution #2
 function dblLinear(n) {
     //

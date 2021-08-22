@@ -29,6 +29,7 @@ const Calculator = function() {
 
 
 
+
 // Clever soloution by fr0ggy :)
 const Calculator = function() {
   this.evaluate = s => {

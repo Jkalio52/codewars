@@ -8,4 +8,3 @@ var countBits = function(n) {
    
    return output;
 };
-

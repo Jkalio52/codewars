@@ -26,3 +26,4 @@ function listPosition(word) {
 
   return sum;
 }
+

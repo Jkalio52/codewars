@@ -16,6 +16,7 @@ function findNextSquare(sq) {
 
 
 
+
 // The ternary operator solution looks a lot cleaner, and simpler
 function findNextSquare(sq) {
   return Math.sqrt(sq) % 1 ? -1 : Math.pow(Math.sqrt(sq) +1, 2);

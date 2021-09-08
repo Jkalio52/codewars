@@ -26,3 +26,4 @@ function tribonacci(signature, n) {
     return signature
   }
 }
+

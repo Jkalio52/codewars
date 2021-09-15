@@ -24,3 +24,4 @@ function scramble(str1, str2) {
 
   return arr.every(function(v) { return v === true });
 }
+

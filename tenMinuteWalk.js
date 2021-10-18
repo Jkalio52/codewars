@@ -24,7 +24,6 @@ function isValidWalk(walk) {
 
 
 
-
 //...
 function isValidWalk(walk) {
   const north = walk.filter(item => { return item === "n" }).length;

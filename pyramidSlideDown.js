@@ -4,4 +4,3 @@ function longestSlideDown (pyramid) {
   ))[0];
 }
 
-

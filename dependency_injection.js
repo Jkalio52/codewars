@@ -25,4 +25,3 @@ DI.prototype.inject = function (func) {
   	return func.apply(func, funcArr);
   };
 }
-

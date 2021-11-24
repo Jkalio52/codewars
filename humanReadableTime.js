@@ -23,5 +23,3 @@ function humanReadable(seconds) {
   return hours + ':' + minutes + ':' + seconds;
 }
 
-
-

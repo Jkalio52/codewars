@@ -34,3 +34,4 @@ function isValidWalk(walk) {
   return walk.length === 10 && north === south && east === west;
 }
 
+

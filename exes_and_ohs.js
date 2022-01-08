@@ -4,6 +4,7 @@ function XO(str) {
   return str.toLowerCase().charAt('x').length === str.toLowerCase().charAt('o').length;
 }
 
+
 // Or...
 function XO(str) {
   //code here

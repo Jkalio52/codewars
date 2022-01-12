@@ -31,4 +31,3 @@ Array.prototype.sameStructureAs = function (other) {
 
   return this.join("").replace(/[^.,]/g, 1) === other.join("").replace(/[^.,]/g, 1);
 };
-

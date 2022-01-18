@@ -6,7 +6,6 @@ function validate(password) {
 
 
 
-
 // Another solution
 function validate(password) {
   let minMaxLength = /^[\s\S]{8,32}$/,

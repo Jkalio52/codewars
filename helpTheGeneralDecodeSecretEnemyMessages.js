@@ -44,4 +44,3 @@ device.decode = function (w) {
 device.decode = w =>
   [...Array(65)].reduce(pre => device.encode(pre), w);
 
-

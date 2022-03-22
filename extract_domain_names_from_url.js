@@ -19,4 +19,3 @@ function domainName(url) {
   
     return str;
 }
-

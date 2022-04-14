@@ -77,4 +77,3 @@ function sudoku(a, x=0, y=0) {
     return a[x][y] ? next(x,y) : getFree(x,y).reduce((ans,n)=>(a[x][y]=n, ans||next(x,y)), 0);
 }
 
-

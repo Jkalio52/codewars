@@ -42,6 +42,7 @@ const removeZeros = array => {
 
 
 
+
 // even more clever and Best practice, I like this one :)
 function removeZeros(array) {
   removeZerosMergeSort(array, 0, array.length - 1);

@@ -41,6 +41,7 @@ device.decode = function (w) {
 
 
 
+
 // Clean and easy to read solution by 0lexa
 device.decode = w =>
   [...Array(65)].reduce(pre => device.encode(pre), w);

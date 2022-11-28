@@ -9,4 +9,3 @@ function nextBigger(n) {
   return -1
 }
 
-

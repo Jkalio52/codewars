@@ -28,6 +28,7 @@ function removeZeros(array) {
 
 
 
+
 // Other solutions with .Math() method, clever...
 const removeZeros = array => {
   for (let i = array.length - 1; i > 0; i--) {

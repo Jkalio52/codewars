@@ -3,5 +3,3 @@ function longestSlideDown (pyramid) {
     (top, down) => top + Math.max(elem[down], elem[down + 1])
   ))[0];
 }
-
-

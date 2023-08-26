@@ -7,4 +7,3 @@ function smaller(arr) {
 
 
 
-

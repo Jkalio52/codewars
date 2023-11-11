@@ -28,4 +28,3 @@ function longestConsec(strarr, k) {
   return strarr.slice(i,i+k).join('')
 }
 
-

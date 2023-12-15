@@ -47,4 +47,3 @@ device.decode = w =>
 
 
 
-

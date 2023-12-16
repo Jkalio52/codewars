@@ -29,3 +29,4 @@ function findOutlier(integers){
   return even.length === 1 ? even[0] : odd[0];
 }
 
+

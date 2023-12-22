@@ -27,4 +27,3 @@ DI.prototype.inject = function (func) {
 }
 
 
-

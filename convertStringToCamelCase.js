@@ -7,7 +7,6 @@ function toCamelCase(str) {
 
 
 
-
 // Alternative solution with just two lines of codes
 function toCamelCase(str){
   return str.replace(/[_-]\w/gi, ch => ch[1].toUpperCase());

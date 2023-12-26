@@ -27,4 +27,3 @@ function longestConsec(strarr, k) {
       i = lens.indexOf( Math.max(...lens) );
   return strarr.slice(i,i+k).join('')
 }
-

@@ -6,7 +6,7 @@ const Calculator = function() {
     
     let arr = string.split(' ');
     while (arr.length > 1) {
-      // multiplication and division have priority
+      //Multiplication and division have priority
       // create a new array that will only have numbers and + or -
       const ops = arr.findIndex(a => a === "*" || a === "/");
       const index =

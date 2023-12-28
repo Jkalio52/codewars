@@ -1,13 +1,13 @@
 const Calculator = function() {
   this.evaluate = string => {
     // do code here    
-    //let numbers = string.split(/,|\n/).map(Number)
+    // let numbers = string.split(/,|\n/).map(Number)
   //return numbers.reduce((a, b) => a + b)
     
     let arr = string.split(' ');
     while (arr.length > 1) {
-      //Multiplication and division have priority
-      //Create a new array that will only have numbers and + or -
+      // Multiplication and division have priority
+      // Create a new array that will only have numbers and + or -
       const ops = arr.findIndex(a => a === "*" || a === "/");
       const index =
         ops === -1 ? arr.findIndex(b => b === "+" || b === "-") : ops;

@@ -31,7 +31,7 @@ const Calculator = function() {
 
 
 
-// Clever soloution by fr0ggy :)
+// Clever solution by fr0ggy :)
 const Calculator = function() {
   this.evaluate = s => {
     let e=s;

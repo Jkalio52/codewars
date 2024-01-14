@@ -37,3 +37,4 @@ function validate(password) {
           /[a-z]+/           .test(password) &&
           /[0-9]+/           .test(password) ;
 }
+

@@ -21,7 +21,7 @@ function findOutlier(integers) {
 
 
 /*
-This other solution (below) looks a lot cleaner than mines :(
+This other solution (below) looks a lot cleaner than mines :( 
 */
 function findOutlier(integers){
   const even = integers.filter(int => int % 2 === 0);

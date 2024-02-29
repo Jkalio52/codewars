@@ -26,6 +26,7 @@ function findNextSquare(sq) {
 
 
 
+
 // Other solution with ternary operator
 function findNextSquare(sq) {
   var root = Math.sqrt(sq);

@@ -23,6 +23,7 @@ const Calculator = function() {
           : a + b;
       arr.splice(index - 1, 3, calc);
     }
+    
     return Number(arr[0])
   };
 };

@@ -1,4 +1,4 @@
-function comp(array1, array2){
+function comp(array1, array2) {
   // your code here
   if (!array1 || !array2 || array1.length !== array2.length) return false;
   

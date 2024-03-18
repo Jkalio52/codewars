@@ -19,6 +19,7 @@ function arrayDiff(a, b) {
   for (i in b) {
     if (a.indexOf(b[i]) === 1) diff.push(b[i]);
   }
+  
   return diff.sort((a, b) => a - b);
 }
 

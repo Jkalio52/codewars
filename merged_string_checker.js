@@ -10,6 +10,7 @@ function isMerge(s, part1, part2) {
     } else if (input[i] === secondWrd[0]) {
       secondWrd.splice(0, 1);
     } else {
+      
       return false;
     }
   }

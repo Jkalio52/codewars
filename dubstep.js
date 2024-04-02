@@ -1,4 +1,4 @@
-function songDecoder(song){
+function songDecoder(song) {
   // At its simplest form...
   return (
 	song

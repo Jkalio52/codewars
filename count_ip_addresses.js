@@ -1,4 +1,4 @@
-function ipsBetween(start, end){
+function ipsBetween(start, end) {
   // TODO
   let startIP = start.split('.');
   let endIP = end.split('.');

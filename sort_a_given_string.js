@@ -1,4 +1,4 @@
-function order(words){
+function order(words) {
   // ...
   let wordsArray = words.split(' ');
   let numArray = words.match(/[1-9]/g);

@@ -5,7 +5,7 @@ function removeZeros(array) {
   // Zero elements also maintain order in which they occurred.
   // [0, "0", 1, 2, 3] --> [1, 2, 3, 0, "0"]
   
-  // Do not use any temporary arrays or objects. Additionally, you're not able
+  // Do not use any temporary arrays or objects. Additionally, you're not able 
   // to use any Array or Object prototype methods such as .shift(), .push(), etc
   
   // The correctly sorted array should be returned.

@@ -8,7 +8,7 @@ function removeZeros(array) {
   // Do not use any temporary arrays or objects. Additionally, you're not able
   // to use any Array or Object prototype methods such as .shift(), .push(), etc
   
-  //The correctly sorted array should be returned.
+  // The correctly sorted array should be returned.
   // return array;
   
   const start = []

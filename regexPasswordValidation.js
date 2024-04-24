@@ -40,4 +40,3 @@ function validate(password) {
           /[0-9]+/           .test(password) ;
 }
 
-

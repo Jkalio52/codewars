@@ -7,7 +7,7 @@ const Calculator = function() {
     let arr = string.split(' ');
     while (arr.length > 1) {
       // Multiplication and division have priority 
-      // Create a new array that will only have numbers and + or -
+      // Create a new array that will only have numbers and + or - 
       const ops = arr.findIndex(a => a === "*" || a === "/");
       const index =
         ops === -1 ? arr.findIndex(b => b === "+" || b === "-") : ops;

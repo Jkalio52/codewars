@@ -19,3 +19,4 @@ function validateBattlefield(field) {
   return [0, 4, 3, 2, 1].every((s, i) => s == ships[i]);
 }
 
+

@@ -26,6 +26,7 @@ Array.prototype.sameStructureAs = function (other) {
 
 
 
+
 // Other solution...
 
 Array.prototype.sameStructureAs = function (other) {

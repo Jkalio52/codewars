@@ -7,4 +7,3 @@ function descendingOrder(n) {
     return Number(numbers);
 }
 
-

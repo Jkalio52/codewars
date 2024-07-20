@@ -2,7 +2,7 @@ const Calculator = function() {
   this.evaluate = string => {
     // do code here 
     // let numbers = string.split(/,|\n/).map(Number) 
-   // return numbers.reduce((a, b) => a + b)
+   // return numbers.reduce((a, b) => a + b) 
     
     let arr = string.split(' ');
     while (arr.length > 1) {

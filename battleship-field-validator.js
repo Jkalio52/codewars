@@ -20,4 +20,3 @@ function validateBattlefield(field) {
 }
 
 
-

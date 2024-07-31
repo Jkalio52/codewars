@@ -18,7 +18,7 @@ function order(words) {
 
 
 
-// Other Solution.
+// Other Solution
 // A simpler and cleaner solution
 function order(words){
   

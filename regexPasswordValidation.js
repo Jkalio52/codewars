@@ -18,7 +18,7 @@ function validate(password) {
         count = 0;
 
     if (minMaxLength.test(password)) {
-        // Only need 3 out of 4 of these to match
+        // Only need 3 out of 4 of these to match 
         if (upper.test(password)) count++;
         if (lower.test(password)) count++;
         if (number.test(password)) count++;

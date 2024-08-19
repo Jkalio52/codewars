@@ -10,7 +10,7 @@ var DI = function (dependency) {
 DI.prototype.inject = function (func) {
   // Your code goes here 
   let deps = func.toString().match(/function\s?\((.+)\)\s?{/);
-  // Create param array
+  // Create param array 
   deps = deps && deps[1].split(",").map(function(i) { 
     return i.replace(/\s+/, ''); 
   });

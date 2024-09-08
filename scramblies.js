@@ -16,6 +16,7 @@ function scramble(str1, str2) {
 
 
 
+
 // A clever solution... I like :) 
 function scramble(str1, str2) {
  var arr = []; 

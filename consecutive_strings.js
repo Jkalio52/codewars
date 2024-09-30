@@ -22,7 +22,7 @@ function longestConsec(strarr, k) {
 
 
 // A clever solution ...I like this :)
-// I got lost at line #25, but I got it now lol 
+// I got lost at line #25, but I got it now lol
 function longestConsec(strarr, k) {
   if ( strarr.length==0 || k> strarr.length || k <1 ) return "";
   let lens = strarr.map( (_,i,arr) => arr.slice(i,i+k).join('').length ),

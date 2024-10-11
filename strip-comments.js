@@ -1,4 +1,4 @@
-// Strip Comments 
+// Strip Comments
 function solution(input, markers) {
   let comments = input.split('\n');
   for (let i in markers) {

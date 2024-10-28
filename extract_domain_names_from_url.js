@@ -1,5 +1,5 @@
 function domainName(url) {
-  // your code here
+  // your code here 
   let x = /(\/{2}|\.)/g;
   let domain = url.match(x);
   let str = '';

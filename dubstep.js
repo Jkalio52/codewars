@@ -6,7 +6,7 @@ function songDecoder(song) {
 	  .split('WUB')
       	  // Second, remove empty strings, with (' ')
 	  .filter(Boolean)
-	  // And finally, join the words from the array into a string 
+	  // And finally, join the words from the array into a string
 	  .join(' ')
   );
 }

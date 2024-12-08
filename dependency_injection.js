@@ -20,7 +20,7 @@ DI.prototype.inject = function (func) {
   	funcArr.push(this.dependency[deps[i]]);
   }
  
-  // Pass dependent parameters to the function with apply() method  
+  // Pass dependent parameters to the function with apply() method 
   return function() {
   	return func.apply(func, funcArr);
   };

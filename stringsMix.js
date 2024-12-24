@@ -1,5 +1,5 @@
 function mix(s1, s2) {
-  // your code 
+  // your code
   let alphabetsArr = [], arr1 = cal(s1), arr2 = cal(s2);
 
   for (let i in arr1) {

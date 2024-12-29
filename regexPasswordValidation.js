@@ -33,7 +33,7 @@ function validate(password) {
 
 
 
-// Solution #3 
+// Solution #3
 function validate(password) {
   return  /^[A-Za-z0-9]{6,}$/.test(password) &&
           /[A-Z]+/           .test(password) &&

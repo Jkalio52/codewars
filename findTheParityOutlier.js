@@ -1,4 +1,4 @@
-// Codewars Challenge
+// Codewars Challenge 
 // Find The Parity Outlier
 function findOutlier(integers) {
   // your code here

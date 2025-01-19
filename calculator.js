@@ -36,7 +36,7 @@ const Calculator = function() {
 // Clever solution by fr0ggy :) 
 const Calculator = function() {
   this.evaluate = s => {
-    let e =s;
+    let e = s;
     const r = /([0-9e.+\-]+) (\*|\/) ([0-9e.+\-]+)/
     const t = /([0-9e.+\-]+) (\+|\-) ([0-9e.+\-]+)/
     while (r.test(e)) e=e.replace(r,(_,x,o,y)=>o=='/'?(+x)/(+y):(+x)*(+y))

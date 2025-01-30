@@ -62,7 +62,7 @@ function sudoku(puzzle) {
 
 
 
-// Other solution...
+// Other solution... 
 function sudoku(a, x=0, y=0) {
     function next(x, y) {
         if (++y == 9) (x++, y=0);

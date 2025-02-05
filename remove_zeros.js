@@ -54,7 +54,7 @@ function removeZeros(array) {
   return array;
 }
 function removeZerosMergeSort(array, start, end) {
-  // Base cases of length 1 and 2
+  // Base cases of length 1 and 2 
   if (start >= end) return;
   if (start + 1 == end) { 
     if ( isZero(array[start]) && !isZero(array[end]) ) 

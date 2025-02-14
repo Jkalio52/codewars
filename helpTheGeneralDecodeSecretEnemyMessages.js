@@ -32,6 +32,7 @@ device.decode = function (w) {
 
 
 
+
 // Other solution by firstonline, MaxiimRandob, d@rude1337 -- Very easy to read :) 
 device.decode = function (w) {
   for (j = 0; j < 65; j++){

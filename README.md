@@ -1,5 +1,5 @@
 # codewars
-Codewars Tasks - A platform for developers, where you can train your dev skills through challenges of different difficulties. #100DaysOfCode
+Codewars Tasks - A platform for developers where you can train your dev skills through challenges of different difficulties. #100DaysOfCode
 
 ## What is Codewars?
 Codewars is a community of computer programmers where web and software developers are trained on programming challenges known as kata.

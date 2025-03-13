@@ -61,7 +61,7 @@ function removeZerosMergeSort(array, start, end) {
       swap(array, start, end);
     return;
   }
-  // Recursive case
+  // Recursive case 
   var middle = Math.floor((start + end) / 2);
   removeZerosMergeSort(array, start, middle - 1);
   removeZerosMergeSort(array, middle, end);

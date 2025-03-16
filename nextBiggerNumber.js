@@ -1,5 +1,5 @@
 function nextBigger(n) {
-  // your code here 
+  // your code here
   const posInteger = n => ('' + n).split('').sort((a, b) => b - a)
   const biggestNum = +posInteger(n).join('')
   for (let i = n + 1; i <= biggestNum; i++) {

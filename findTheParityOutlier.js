@@ -22,6 +22,7 @@ function findOutlier(integers) {
 
 
 
+
 /*
 This other solution (below) looks a lot cleaner than mine :( 
 */

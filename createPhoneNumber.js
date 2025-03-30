@@ -4,7 +4,7 @@ function createPhoneNumber(numbers) {
   
   
   
-  
+
   // Solution with .replace() method 
   let tel = '(xxx) xxx-xxxx';
   

@@ -9,7 +9,7 @@ function removeZeros(array) {
   // to use any Array or Object prototype methods such as .shift(), .push(), etc 
   
   // The correctly sorted array should be returned. 
-  // return array;
+  // return array; 
   
   const start = []
   const stop = []

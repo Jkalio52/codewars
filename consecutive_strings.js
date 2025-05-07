@@ -22,6 +22,7 @@ function longestConsec(strarr, k) {
 
 
 
+
 // A clever solution ...I like this :) 
 // I got lost at line #25, but I got it now lol 
 function longestConsec(strarr, k) {

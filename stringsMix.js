@@ -38,6 +38,7 @@ function mix(s1, s2) {
 
 
 
+
 // Solution by 0lexa 
 const mix = (s1, s2) =>
   [...`abcdefghijklmnopqrstuvwxyz`].map(val => [val, s1.split(val).length - 1, s2.split(val).length - 1])

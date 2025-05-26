@@ -27,7 +27,7 @@ Array.prototype.sameStructureAs = function (other) {
 
 
 
-// Other solution...
+// Other solution... 
 
 Array.prototype.sameStructureAs = function (other) {
   if (!isArray(other)) return false;

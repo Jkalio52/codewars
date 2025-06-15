@@ -21,4 +21,3 @@ function validateBattlefield(field) {
 
 
 
-

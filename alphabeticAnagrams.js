@@ -28,4 +28,3 @@ function listPosition(word) {
 }
 
 
-

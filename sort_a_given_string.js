@@ -20,7 +20,7 @@ function order(words) {
 
 
 // Other Solution
-// A simpler and cleaner solution 
+// A simpler and cleaner solution
 function order(words){
   
   return words.split(' ').sort(function(a, b){

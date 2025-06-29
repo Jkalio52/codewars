@@ -30,7 +30,7 @@ function removeZeros(array) {
 
 
 
-// Other solutions with .Math() method, clever...
+// Other solutions with .Math() method, clever... 
 const removeZeros = array => {
   for (let i = array.length - 1; i > 0; i--) {
     if ((array[i] !== 0 && array[i] !== `0`) && (array[i - 1] === 0 || array[i - 1] === `0`)) {

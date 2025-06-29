@@ -66,7 +66,7 @@ function removeZerosMergeSort(array, start, end) {
   removeZerosMergeSort(array, start, middle - 1);
   removeZerosMergeSort(array, middle, end);
   // Merge in place by overwriting the left side of the merge 
-  // The overwritten items are safely stowed behind the right side until needed
+  // The overwritten items are safely stowed behind the right side until needed 
   var target = start, left = start, right = middle;
   while (target < end && left < right) {
     if ( isZero(array[left]) && !isZero(array[right]) )

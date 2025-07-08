@@ -1,4 +1,4 @@
-// Help the general decode secret enemy messages solution 
+// Help the general decode secret enemy messages solution
 console.log (device.encode ('What is this ?'));
 device.decode = function (w) {
   return w; 

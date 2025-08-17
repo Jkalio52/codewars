@@ -1,5 +1,5 @@
 // Exes and Ohs
-// Solution 1 
+// Solution 1
 function XO(str) {
   return str.toLowerCase().charAt('x').length === str.toLowerCase().charAt('o').length;
 }

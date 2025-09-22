@@ -6,7 +6,7 @@ function XO(str) {
 
 
 
-// Or... 
+// Or...
 function XO(str) {
   // code here 
   let x = [];

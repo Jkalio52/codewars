@@ -1,5 +1,5 @@
 function isMerge(s, part1, part2) {
-  // Divide the strings into an ordered list of substrings 
+  // Divide the strings into an ordered list of substrings
   let input = s.split('');
   let firstWrd = part1.split('');
   let secondWrd = part2.split('');

@@ -1,5 +1,5 @@
 function humanReadable(seconds) {
-  // TODO 
+  // TODO
   if ( seconds < 0 || seconds > 360000 ) {
     return null;
   }

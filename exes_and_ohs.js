@@ -32,7 +32,7 @@ function XO(str) {
 
 
 
-// I found another solution, and it looks a lot simpler. 
+// I found another solution, and it looks a lot simpler.
 function XO(str) {
     return str.toLowerCase().split('x').length === str.toLowerCase().split('o').length;
 }

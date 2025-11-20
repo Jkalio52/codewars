@@ -89,4 +89,3 @@ class RomanNumerals {
          return str.match(/CM|CD|XC|XL|IX|IV|\w/g).reduce((acc, el) => acc + map[el], 0);
     }
 }
-

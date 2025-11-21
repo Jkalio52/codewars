@@ -72,7 +72,7 @@ function removeZerosMergeSort(array, start, end) {
     if ( isZero(array[left]) && !isZero(array[right]) )
       swap(array,right++,target++);
     else swap(array,left++,target++);
-    // Check if the left items have been stowed behind the right items
+    // Check if the left items have been stowed behind the right items 
     if (left == target - 1) left = right - 1;
     // Check when stowed items have been used up, return to the left
     if (left == right) left = target;

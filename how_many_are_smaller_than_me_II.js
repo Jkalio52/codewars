@@ -4,4 +4,3 @@ function smaller(arr) {
    return arr.slice(y).filter(num => num < x).length;
  });
 }
-

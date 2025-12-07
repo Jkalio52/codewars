@@ -1,6 +1,6 @@
 /**
  * Constructor DependencyInjector
- * @param {Object} - object with dependencies 
+ * @param {Object} - object with dependencies
  */
 var DI = function (dependency) {
   this.dependency = dependency;

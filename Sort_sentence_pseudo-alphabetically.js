@@ -1,4 +1,4 @@
-/**
+/** 
 Given a standard English sentence passed in as a string, write a method that will return a sentence made up of the same words, but sorted by their first letter. However, the method of sorting has a twist to it:
 
 All words that begin with a lowercase letter should be at the beginning of the sorted sentence, and sorted in ascending order.

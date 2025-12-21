@@ -14,7 +14,7 @@ Invalid input examples:
 123.045.067.089
 
 Notes:
-Leading zeros (e.g. 01.02.03.04) are considered invalid
+Leading zeros (e.g., 01.02.03.04) are considered invalid
 Inputs are guaranteed to be a single string
 Regular ExpressionsAlgorithms
 */

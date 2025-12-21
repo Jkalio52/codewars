@@ -18,3 +18,22 @@ Leading zeros (e.g., 01.02.03.04) are considered invalid
 Inputs are guaranteed to be a single string
 Regular ExpressionsAlgorithms
 */
+function isValidIP(str) {
+  const octets = str.split('.');
+
+  // Must have exactly four octets
+  if (octets.length !== 4) return false;
+
+  return octets.every(octet => {
+    // Check if octet is a non-empty string of digits only
+    if (!/^\d+$/.test(octet)) return false;
+
+    // Check for leading zeros: 
+    // "0" is valid, but "01" or "00" are not.
+    if (octet.length > 1 && octet[0] === '0') return false;
+
+    // Convert to number and check range 0-255
+    const val = Number(octet);
+    return val >= 0 && val <= 255;
+  });
+}

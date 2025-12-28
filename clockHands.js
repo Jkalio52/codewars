@@ -13,7 +13,6 @@ function clockHands(angle) {
   const results = [];
 
   for (let k = 0; k < 11; k++) {
-    // t = (360k + angle) / (11/120)
     const t = (120 / 11) * (360 * k + normalizedAngle);
     const totalSeconds = Math.floor(t + 1e-9);
 

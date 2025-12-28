@@ -21,9 +21,6 @@ function sort(sentence) {
 
   // 2. Sort the array using a custom comparison function.
   words.sort((a, b) => {
-    // Helper function to check if a word starts with a lowercase letter.
-    // This handles edge cases where words might start with numbers or symbols
-    // by ensuring we only compare true alphabetic characters.
     const isLower = (word) => /^[a-z]/.test(word);
 
     const isALower = isLower(a);

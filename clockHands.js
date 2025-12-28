@@ -7,3 +7,31 @@ The times must be formatted as HH:MM:SS, zero-padding all time components. Use 1
 The first result in your array should be either midnight or the first time after midnight, such as 12:32:43 for the 180 degree case. There should be only 11 results in the output.
 */
 
+function clockHands(angle) {
+  // Normalize angle to [0, 360)
+  const normalizedAngle = ((angle % 360) + 360) % 360;
+  const results = [];
+
+  for (let k = 0; k < 11; k++) {
+    // Relative speed is 11/120 degrees per second
+    // t = (360k + angle) / (11/120)
+    const t = (120 / 11) * (360 * k + normalizedAngle);
+    
+    // Add epsilon to handle floating point precision errors 
+    // such as 28799.999999999996 becoming 28800
+    const totalSeconds = Math.floor(t + 1e-9);
+
+    let h = Math.floor(totalSeconds / 3600) % 12;
+    const m = Math.floor((totalSeconds % 3600) / 60);
+    const s = totalSeconds % 60;
+
+    const displayH = h === 0 ? "12" : h.toString().padStart(2, '0');
+    const displayM = m.toString().padStart(2, '0');
+    const displayS = s.toString().padStart(2, '0');
+
+    results.push(`${displayH}:${displayM}:${displayS}`);
+  }
+
+  return results;
+}
+

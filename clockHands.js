@@ -13,12 +13,8 @@ function clockHands(angle) {
   const results = [];
 
   for (let k = 0; k < 11; k++) {
-    // Relative speed is 11/120 degrees per second
     // t = (360k + angle) / (11/120)
     const t = (120 / 11) * (360 * k + normalizedAngle);
-    
-    // Add epsilon to handle floating point precision errors 
-    // such as 28799.999999999996 becoming 28800
     const totalSeconds = Math.floor(t + 1e-9);
 
     let h = Math.floor(totalSeconds / 3600) % 12;
@@ -32,6 +28,6 @@ function clockHands(angle) {
     results.push(`${displayH}:${displayM}:${displayS}`);
   }
 
-  return results;
+  return results; //your code here
 }
 

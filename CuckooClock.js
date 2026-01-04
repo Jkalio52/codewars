@@ -15,3 +15,43 @@ Explanation: It chimes once at "03:45",4 times at "04:00", once each at "04:15",
 
 Source: International Collegiate Programming Contest, North Central North American Regional, 2023.
 */
+
+function cuckooClock(inputTime, chimes) {
+    let [hours, minutes] = inputTime.split(':').map(Number);
+    let remainingChimes = chimes;
+
+    // Helper: Formats 0 into 12 for 12-hour clock
+    const getChimesOnHour = (h) => h === 0 ? 12 : h;
+
+    // Helper: Format back to "HH:MM"
+    const format = (h, m) => {
+        let displayH = h === 0 ? 12 : h;
+        return `${displayH.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}`;
+    };
+
+    // Step 1: Check if starting EXACTLY on a chime interval
+    if (minutes % 15 === 0) {
+        let current = (minutes === 0) ? getChimesOnHour(hours % 12) : 1;
+        if (remainingChimes <= current) return format(hours % 12, minutes);
+        remainingChimes -= current;
+    }
+
+    // Step 2: Jump to the next 15-minute mark
+    let totalMinutes = hours * 60 + minutes;
+    totalMinutes += (15 - (totalMinutes % 15));
+
+    // Step 3: Loop until chimes are exhausted
+    while (true) {
+        let currentH = Math.floor(totalMinutes / 60) % 12;
+        let currentM = totalMinutes % 60;
+        
+        let currentChimes = (currentM === 0) ? getChimesOnHour(currentH) : 1;
+        
+        if (remainingChimes <= currentChimes) {
+            return format(currentH, currentM);
+        }
+        
+        remainingChimes -= currentChimes;
+        totalMinutes += 15;
+    }
+}

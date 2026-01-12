@@ -32,3 +32,28 @@ function humanReadable(seconds) {
   // Combine into the final string format HH:MM:SS
   return hours + ':' + minutes + ':' + seconds;
 }
+
+
+
+
+
+/**
+Refactor - Modern, DRY version of the time formatter
+DRY (Don't Repeat Yourself) using padStart(), and this avoids all those if statements
+
+*/
+function humanReadableModern(totalSeconds) {
+  // Basic bounds check
+  if (totalSeconds < 0 || totalSeconds > 359999) return "99:59:59";
+
+  const h = Math.floor(totalSeconds / 3600);
+  const m = Math.floor((totalSeconds % 3600) / 60); // Use modulo for cleaner math
+  const s = totalSeconds % 60;
+
+  // Helper to pad numbers to 2 digits
+  const format = (num) => String(num).padStart(2, '0');
+
+  // Return using Template Literals
+  return `${format(h)}:${format(m)}:${format(s)}`;
+}
+

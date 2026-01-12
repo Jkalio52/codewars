@@ -37,6 +37,7 @@ function humanReadable(seconds) {
 
 
 
+
 /**
 Refactor - Modern, DRY version of the time formatter
 DRY (Don't Repeat Yourself) using padStart(), and this avoids all those if statements

@@ -1,5 +1,5 @@
 // Codewars Challenge 
-// Find The Parity Outlier
+// Find The Parity Outlier 
 function findOutlier(integers) {
   // your code here
   const oddArr = [];

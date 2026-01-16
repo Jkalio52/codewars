@@ -22,12 +22,22 @@ function findNextSquare(sq) {
 
 
 
-
-
-
-// This ternary operator solution looks a lot cleaner, and simpler 
+/** 
+Using Number.isInteger() for a more readable check
+*/
 function findNextSquare(sq) {
-  return Math.sqrt(sq) % 1 ? -1 : Math.pow(Math.sqrt(sq) +1, 2);
+  // 1. Calculate the root once to avoid doing the math twice
+  const root = Math.sqrt(sq);
+
+  // 2. Guard Clause: If the root isn't an integer, we know 'sq' wasn't a perfect square.
+  // Number.isInteger() is cleaner and more readable than (root % 1 === 0)
+  if (!Number.isInteger(root)) {
+    return -1;
+  }
+
+  // 3. Return the square of the next number
+  // The '**' operator raises the left operand to the power of the right operand
+  return (root + 1) ** 2;
 }
 
 
@@ -35,6 +45,13 @@ function findNextSquare(sq) {
 
 
 
+
+
+
+// This ternary operator solution looks a lot cleaner, and simpler 
+function findNextSquare(sq) {
+  return Math.sqrt(sq) % 1 ? -1 : Math.pow(Math.sqrt(sq) +1, 2);
+}
 
 
 

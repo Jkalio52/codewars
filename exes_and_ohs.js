@@ -37,7 +37,16 @@ function XO(str) {
 
 
 
-// I found another solution, and it looks a lot simpler.
+// Or...
 function XO(str) {
-    return str.toLowerCase().split('x').length === str.toLowerCase().split('o').length;
+  // Single variable to track the "balance" between Xs and Os
+  let balance = 0;
+
+  for (let char of str.toLowerCase()) {
+    if (char === 'x') balance++;
+    if (char === 'o') balance--;
+  }
+
+  // If balance returns to 0, amounts were equal.
+  return balance === 0;
 }

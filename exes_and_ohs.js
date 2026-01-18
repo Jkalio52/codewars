@@ -6,7 +6,7 @@ function XO(str) {
 
 
 
-// Or...
+// Or... 
 function XO(str) {
   // Initialize storage arrays (This works, but uses O(N) extra memory)
   let x = [];

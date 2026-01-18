@@ -50,3 +50,7 @@ function XO(str) {
   // If balance returns to 0, amounts were equal.
   return balance === 0;
 }
+
+
+// One-Liner (clean)
+

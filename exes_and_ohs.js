@@ -53,4 +53,8 @@ function XO(str) {
 
 
 // One-Liner (clean)
-
+function XO(str) {
+  const lower = str.toLowerCase();
+  // Split by 'x' and 'o' and compare the resulting array lengths
+  return lower.split('x').length === lower.split('o').length;
+}

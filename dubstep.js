@@ -2,7 +2,7 @@ function songDecoder(song) {
   // At its simplest form...
   return (
 	song
-	  // First, split strings into array
+	  // First, split strings into an array
 	  .split('WUB')
       	  // Second, remove empty strings, with (' ') 
 	  .filter(Boolean)

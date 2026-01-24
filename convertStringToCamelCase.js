@@ -8,6 +8,12 @@ function toCamelCase(str) {
 
 
 
+/**
+ * Converts a dash or underscore delimited string to camelCase.
+ * Example: "the-stealth-warrior" -> "theStealthWarrior"
+ */
+
+
 
 
 // Alternative solution with just two lines of code 

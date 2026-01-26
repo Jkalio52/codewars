@@ -27,6 +27,6 @@ function clockHands(angle) {
     results.push(`${displayH}:${displayM}:${displayS}`);
   }
 
-  return results; //your code here
+  return results;
 }
 

@@ -1,5 +1,5 @@
 var countBits = function(n) {
-  // Program Me 
+  // Program Me
   // Create an array with bit output 
    let binary = (n).toString(2).split('');
    

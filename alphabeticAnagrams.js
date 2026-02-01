@@ -1,5 +1,5 @@
 function listPosition(word) {
-  let obj = {};
+  let obj = {}; // Maps unique characters to an index
   let counter = [];
   let counts = 0;
 
@@ -26,6 +26,10 @@ function listPosition(word) {
 
   return sum;
 }
+
+
+
+
 
 
 

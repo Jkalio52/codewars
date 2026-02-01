@@ -26,3 +26,9 @@ function listPosition(word) {
 
   return sum;
 }
+
+
+
+/**
+Refactor this to use ES6+ syntax (Map, reduce)...
+*/

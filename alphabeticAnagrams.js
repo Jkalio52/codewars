@@ -1,6 +1,6 @@
 function listPosition(word) {
   let obj = {}; // Maps unique characters to an index
-  let counter = [];
+  let counter = []; // Stores the frequency of each unique character
   let counts = 0;
 
   word.split("").sort().forEach(function(x) {

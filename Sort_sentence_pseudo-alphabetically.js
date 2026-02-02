@@ -8,7 +8,7 @@ If a word appears multiple times in the sentence, it should be returned multiple
 Example:
 For example, given the input string "Land of the Old Thirteen! Massachusetts land! land of Vermont and Connecticut!", your method should return 
 "and land land of of the Vermont Thirteen Old Massachusetts Land Connecticut". 
-Lower case letters are sorted a -> l -> l -> o -> o -> t and upper case letters are sorted V -> T -> O -> M -> L -> C.
+Lower case letters are sorted a -> l -> l -> o -> o -> t, and upper case letters are sorted V -> T -> O -> M -> L -> C.
 */
 function sort(sentence) {
   // 1. Clean the string: remove all non-alphanumeric characters (except spaces) 

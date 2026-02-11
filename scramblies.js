@@ -11,19 +11,3 @@ function scramble(str1, str2) {
     return word2.length == 0;
 }
 
-
-
-
-
-
-
-// A clever solution... I like :) 
-function scramble(str1, str2) {
- var arr = []; 
-
-  [...str2].map(function(v) {
-    arr.push( [...str1].includes(v) );
-  });
-
-  return arr.every(function(v) { return v === true });
-}

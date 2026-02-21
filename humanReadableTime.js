@@ -57,4 +57,3 @@ function humanReadableModern(totalSeconds) {
   // Return using Template Literals
   return `${format(h)}:${format(m)}:${format(s)}`;
 }
-

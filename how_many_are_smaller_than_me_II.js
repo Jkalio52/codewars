@@ -1,6 +1,7 @@
 function smaller(arr) {
-   // code me 
+  // .map iterates through each element 'x' at index 'y'
   return arr.map((x, y) => {
-   return arr.slice(y).filter(num => num < x).length;
- });
+    // 
+    return arr.slice(y).filter(num => num < x).length;
+  });
 }

@@ -7,3 +7,9 @@ function smaller(arr) {
     return arr.slice(y).filter(num => num < x).length;
   });
 }
+
+
+
+/**
+The Refactor (an optimized approach)
+*/

@@ -13,3 +13,25 @@ function smaller(arr) {
 /**
 The Refactor (an optimized approach)
 */
+/**
+ * Counts how many elements to the right are smaller than the current element.
+ * Refactored for better memory management by avoiding repeated array slicing.
+ */
+function smaller(arr) {
+  const result = new Array(arr.length);
+
+  for (let i = 0; i < arr.length; i++) {
+    let count = 0;
+    const current = arr[i];
+
+    // Look only at elements to the right of the current index
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[j] < current) {
+        count++;
+      }
+    }
+    result[i] = count;
+  }
+
+  return result;
+}

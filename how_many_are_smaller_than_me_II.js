@@ -10,10 +10,10 @@ function smaller(arr) {
 
 
 
+
+
 /**
-The Refactor (an optimized approach)
-*/
-/**
+ * The Refactor (an optimized approach)
  * Counts how many elements to the right are smaller than the current element.
  * Refactored for better memory management by avoiding repeated array slicing.
  */

@@ -29,4 +29,3 @@ function clockHands(angle) {
 
   return results;
 }
-

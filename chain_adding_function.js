@@ -35,5 +35,7 @@ function add(n) {
 
 
 /*
-Modern Refactor with Arrow Functions
+Modern Refactor with Arrow Functions.
+Symbol.toPrimitive instead of valueOf. 
+Symbol.toPrimitive is the ES6+ standard for defining how an object should behave when converted to a string or number.
 */

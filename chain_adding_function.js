@@ -31,3 +31,9 @@ function add(n) {
   
   return self;
 }
+
+
+
+/*
+Modern Refactor with Arrow Functions
+*/

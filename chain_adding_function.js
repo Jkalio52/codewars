@@ -41,7 +41,7 @@ Symbol.toPrimitive is the ES6+ standard for defining how an object should behave
 */
 /**
  * A curried addition function that supports infinite chaining.
- * Uses Symbol.toPrimitive for modern type coercion.
+ * Follows the DRY principle by reusing the same logic recursively.
  */
 const add = (n) => {
   // Recursively return the add function with the accumulated sum

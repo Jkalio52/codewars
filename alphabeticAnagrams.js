@@ -3,6 +3,7 @@ function listPosition(word) {
   let counter = []; // Stores the frequency of each unique character
   let counts = 0;
 
+  // Pre-process: Identify unique characters in alphabetical order
   word.split("").sort().forEach(function(x) {
       if ( obj[x] == undefined ) {
           obj[x] = counts;

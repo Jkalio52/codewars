@@ -47,7 +47,7 @@ function listPosition(word) {
   // Frequency map for the characters currently in our "suffix" pool.
   const counts = new Map(sortedUnique.map(c => [c, 0]));
   
-  let rank = 1n; // Use BigInt for large strings to avoid precision issues
+  let rank = 1n; // Use BigInt for large strings to avoid precision issues 
   let suffixPermutations = 1n; // Running calculation of (i! / product of counts!)
 
   // Process word from right to left

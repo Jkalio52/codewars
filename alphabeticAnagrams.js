@@ -44,7 +44,7 @@ function listPosition(word) {
   const chars = word.split('');
   const sortedUnique = [...new Set(chars)].sort();
   
-  // Frequency map for the characters currently in our "suffix" pool
+  // Frequency map for the characters currently in our "suffix" pool.
   const counts = new Map(sortedUnique.map(c => [c, 0]));
   
   let rank = 1n; // Use BigInt for large strings to avoid precision issues

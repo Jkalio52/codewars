@@ -7,7 +7,7 @@ function listPosition(word) {
   word.split("").sort().forEach(function(x) {
       if ( obj[x] == undefined ) {
           obj[x] = counts;
-          counter[counts] = 0; // Initialize frequency to 0
+          counter[counts] = 0; // Initialize frequency to 0 
           counts ++;
       }
   });

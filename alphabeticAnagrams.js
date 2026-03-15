@@ -67,7 +67,7 @@ function listPosition(word) {
       }
     }
 
-    // Update numerator: multiply by the next factorial step (i+1)
+    // Update numerator: multiply by the next factorial step (i+1) 
     suffixPermutations *= step;
   });
 

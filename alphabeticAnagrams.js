@@ -18,7 +18,7 @@ function listPosition(word) {
   // Iterate backwards to build the permutations dynamically
   word.split("").reverse().forEach(function(x, i) {
       let step = i + 1, idx = obj[x]; 
-      counter[idx] ++;
+      counter[idx] ++; // Add current char to the suffix frequency pool
       min /= counter[idx];
       for (let j = 0; j < idx; ++j) 
           if (counter[j] != 0) 

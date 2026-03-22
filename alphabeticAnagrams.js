@@ -12,7 +12,7 @@ function listPosition(word) {
       }
   });
 
-  let min = 1;
+  let min = 1; // This represents the value of (1 / (product of frequencies!))
   let sum = min;
 
   word.split("").reverse().forEach(function(x, i) {

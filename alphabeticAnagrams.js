@@ -19,6 +19,8 @@ function listPosition(word) {
   word.split("").reverse().forEach(function(x, i) {
       let step = i + 1, idx = obj[x]; 
       counter[idx] ++; // Add current char to the suffix frequency pool
+
+      // Update 'min' to reflect the new character frequencies in the denominator
       min /= counter[idx];
       for (let j = 0; j < idx; ++j) 
           if (counter[j] != 0) 

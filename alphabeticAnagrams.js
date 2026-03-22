@@ -27,6 +27,8 @@ function listPosition(word) {
       for (let j = 0; j < idx; ++j) 
           if (counter[j] != 0) 
               sum += min * counter[j];
+
+      // Multiply by step to prepare the numerator (n!) for the next iteration 
       min *= step;
   });
 

@@ -22,6 +22,8 @@ function listPosition(word) {
 
       // Update 'min' to reflect the new character frequencies in the denominator
       min /= counter[idx];
+
+      // Calculate how many permutations start with a character smaller than 'x' 
       for (let j = 0; j < idx; ++j) 
           if (counter[j] != 0) 
               sum += min * counter[j];

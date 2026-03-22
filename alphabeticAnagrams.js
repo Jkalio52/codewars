@@ -15,6 +15,7 @@ function listPosition(word) {
   let min = 1; // This represents the value of (1 / (product of frequencies!))
   let sum = min; // The rank starts at 1
 
+  // Iterate backwards to build the permutations dynamically
   word.split("").reverse().forEach(function(x, i) {
       let step = i + 1, idx = obj[x];
       counter[idx] ++;

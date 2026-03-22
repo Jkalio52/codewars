@@ -17,7 +17,7 @@ function listPosition(word) {
 
   // Iterate backwards to build the permutations dynamically
   word.split("").reverse().forEach(function(x, i) {
-      let step = i + 1, idx = obj[x];
+      let step = i + 1, idx = obj[x]; 
       counter[idx] ++;
       min /= counter[idx];
       for (let j = 0; j < idx; ++j) 

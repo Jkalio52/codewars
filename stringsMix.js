@@ -31,4 +31,3 @@ function mix(s1, s2) {
     return (b.length - a.length) || (a < b ? -1 : 1);
   }).join('/')
 };
-

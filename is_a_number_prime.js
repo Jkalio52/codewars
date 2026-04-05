@@ -22,7 +22,7 @@ const isPrime = (num) => {
   if (num <= 1) return false; // Negatives, 0, and 1 are not prime
   if (num <= 3) return true;  // 2 and 3 are prime
   
-  
+  // 2. Quickly eliminate even numbers and multiples of 3
   if (num % 2 === 0 || num % 3 === 0) return false;
 
 

@@ -8,3 +8,9 @@ function isPrime(num) {
   // Primes must be greater than 1
   return num > 1;
 }
+
+
+
+/**
+-The Modern Refactor
+*/

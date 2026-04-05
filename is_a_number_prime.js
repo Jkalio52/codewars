@@ -25,7 +25,8 @@ const isPrime = (num) => {
   // 2. Quickly eliminate even numbers and multiples of 3
   if (num % 2 === 0 || num % 3 === 0) return false;
 
-
+  // 3. Optimized loop: check up to the square root
+  // We use i += 6 to skip numbers divisible by 2 and 3 (6k ± 1 rule)
   for (let i = 5; i * i <= num; i += 6) {
     if (num % i === 0 || num % (i + 2) === 0) return false;
   }

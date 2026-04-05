@@ -15,4 +15,5 @@ function isPrime(num) {
 -The Modern Refactor
 * Optimized Primality Test
 * Complexity: O(sqrt(n))
+* Add a few "guard clauses" to handle even numbers and small primes
 */

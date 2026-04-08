@@ -12,6 +12,7 @@ function smaller(arr) {
 
 
 
+
 /**
  * The Refactor (an optimized approach)
  * Counts how many elements to the right are smaller than the current element.

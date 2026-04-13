@@ -1,7 +1,7 @@
 function findNextSquare(sq) {
   // Return the next square if sq is a perfect square, -1 otherwise 
   
-  // Declaring variables at the top (older style)
+  // Declaring variables at the top (older style) 
   let square;
   let nextSquare;
   

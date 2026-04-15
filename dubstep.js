@@ -14,16 +14,6 @@ function songDecoder(song) {
 
 
 
-
-
-// Nice, very short code, simple and easy to read... 
-function songDecoder(song) {
-  return song.replace(/(WUB)+/g," ").trim()
-}
-
-
-
-
 // with filter method... 
 function songDecoder(song) {
   return song.split('WUB').filter(Boolean).join(' ');

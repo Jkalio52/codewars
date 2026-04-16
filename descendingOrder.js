@@ -6,3 +6,9 @@ function descendingOrder(n) {
   numbers = numbers.join("");
     return Number(numbers);
 }
+
+
+
+/**
+The Refactored/Updated Code
+*/

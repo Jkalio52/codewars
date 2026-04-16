@@ -16,3 +16,11 @@ function descendingOrder(n) {
 * Follows SOLID principles by keeping the logic concise and functional. 
 * Using arrow functions, swapping function(a, b) { ... } for (a, b) => b - a removes boilerplate.
 */
+const descendingOrder = (n) => {
+  return Number(
+    String(n)          // 1. Convert number to string for iteration
+      .split('')       // 2. Break string into an array of individual digits
+      .sort((a, b) => b - a) // 3. Sort numerically (Descending) using an arrow function
+      .join('')        // 4. Reassemble the array back into a string
+  );                   //
+};

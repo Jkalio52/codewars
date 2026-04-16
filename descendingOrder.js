@@ -9,6 +9,7 @@ function descendingOrder(n) {
 
 
 
+
 /**
 * The Refactored/Updated Code. 
 
@@ -22,5 +23,5 @@ const descendingOrder = (n) => {
       .split('')       // 2. Break string into an array of individual digits
       .sort((a, b) => b - a) // 3. Sort numerically (Descending) using an arrow function
       .join('')        // 4. Reassemble the array back into a string
-  );                   //
+  );                   // 5. Cast the final string back to a Number
 };

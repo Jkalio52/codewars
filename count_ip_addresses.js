@@ -4,6 +4,7 @@ function ipsBetween(start, end) {
   let endIP = end.split('.');
   let diffIndex = 0;
 
+  // Finds the first octet where the two IPs differ
   for (let i = 0; i < 4; i++) {
     if (startIP[i] != endIP[i]){
        diffIndex = i;

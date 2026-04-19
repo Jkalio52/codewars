@@ -17,6 +17,7 @@ function ipsBetween(start, end) {
   } else if (diffIndex == 2) {
     return (Number(endIP[2]) - Number(startIP[2])) * (256 - startIP[3]);
   } else if (diffIndex == 1) {
+    // Hardcoded magic numbers (65793) will fail for most arbitrary IP ranges
     let all = endIP[2] === startIP[2] ? Math.pow(2, 16) : 65793;
     return all;
   } else {

@@ -32,11 +32,9 @@ function ipsBetween(start, end) {
 
 /**
 The Refactor
-*/
-/**
  * Calculates the number of IP addresses between start and end (exclusive of end).
  * Treats IPv4 addresses as 32-bit integers for precision and simplicity.
- */
+*/
 function ipsBetween(start, end) {
   // Helper to convert an IP string to a single numeric value
   const ipToLong = (ip) => {
@@ -46,6 +44,6 @@ function ipsBetween(start, end) {
     }, 0);
   };
 
-  // The difference is a simple subtraction of the two "Long" values
+  
   return ipToLong(end) - ipToLong(start);
 }

@@ -44,6 +44,6 @@ function ipsBetween(start, end) {
     }, 0);
   };
 
-  
+  // The difference is a simple subtraction of the two "Long" values
   return ipToLong(end) - ipToLong(start);
 }

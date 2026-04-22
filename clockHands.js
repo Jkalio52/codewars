@@ -8,7 +8,7 @@ The first result in your array should be either midnight or the first time after
 */
 
 function clockHands(angle) {
-  // Normalize angle to [0, 360)
+  // Normalize angle to [0, 360) 
   const normalizedAngle = ((angle % 360) + 360) % 360;
   const results = [];
 

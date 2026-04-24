@@ -27,4 +27,3 @@ const Calculator = function() {
     return Number(arr[0])
   };
 };
-

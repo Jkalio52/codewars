@@ -42,7 +42,6 @@ function listPosition(word) {
 
 
 // Refactor this to use ES6+ syntax (Map, reduce)...
-
 /**
  * Calculates the lexicographical rank of a string with duplicate characters.
  * Uses the formula: Total Permutations = n! / (n1! * n2! * ... nk!) 

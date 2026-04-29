@@ -12,7 +12,7 @@ Lower case letters are sorted a -> l -> l -> o -> o -> t, and upper case letters
 */
 function sort(sentence) {
   // 1. Clean the string: remove all non-alphanumeric characters (except spaces) 
-  // and convert the string into an array of words.
+  // and convert the string into an array of words. 
   const words = sentence
     .replace(/[^\w\s]|_/g, "")
     .replace(/\s+/g, " ") // Normalize whitespace

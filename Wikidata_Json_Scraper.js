@@ -37,3 +37,25 @@ That should be it for instructions. If you have any more questions, check out th
 
 Good Luck!
 */
+
+async function wikidataScraper(url) {
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+
+    //
+    const entityId = Object.keys(data.entities)[0];
+    const entity = data.entities[entityId];
+
+    return {
+      id: entityId,
+      //
+      label: entity.labels?.en?.value || "No Label",
+      description: entity.descriptions?.en?.value || "No Description"
+    };
+  } catch (error) {
+    // In a real scraper, you might want to handle network errors specifically
+    return null;
+  }
+}
+

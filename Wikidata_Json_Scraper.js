@@ -33,6 +33,7 @@ If you were given the URL to this unhelpful entry, you would return the followin
   "LABEL": "No Label",
   "DESCRIPTION": "No Description"
 }
+
 That should be it for instructions. If you have any more questions, check out the section below, or ask them in the Discourse (after you read the section below please.)
 
 Good Luck!
@@ -58,4 +59,3 @@ async function wikidataScraper(url) {
     return null;
   }
 }
-

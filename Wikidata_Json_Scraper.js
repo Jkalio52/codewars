@@ -43,13 +43,13 @@ async function wikidataScraper(url) {
     const response = await fetch(url);
     const data = await response.json();
 
-    //
+    // The data is nested under "entities", using the ID as the key
     const entityId = Object.keys(data.entities)[0];
     const entity = data.entities[entityId];
 
     return {
       id: entityId,
-      //
+      // Access strictly the 'en' property, defaulting to the fallback strings
       label: entity.labels?.en?.value || "No Label",
       description: entity.descriptions?.en?.value || "No Description"
     };

@@ -54,7 +54,7 @@ async function wikidataScraper(url) {
       description: entity.descriptions?.en?.value || "No Description"
     };
   } catch (error) {
-    //
+    // In a real scraper, you might want to handle network errors specifically
     return null;
   }
 }

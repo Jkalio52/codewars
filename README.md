@@ -4,6 +4,8 @@ A collection of my completed Codewars kata solutions used to sharpen problem-sol
 
 This repository documents my journey through various Codewars exercises across multiple difficulty levels and programming concepts.
 
+![Codewars Badge](https://www.codewars.com/users/jkalio52/badges/large)
+
 ---
 
 ## About Codewars

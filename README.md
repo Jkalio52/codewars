@@ -40,7 +40,7 @@ This repository helps me:
 
 - JavaScript
 - Python
-- (Add others if applicable)
+- SQL
 
 ---
 

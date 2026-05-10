@@ -42,6 +42,7 @@ This repository helps me:
 - Python
 - SQL
 - Shell
+- Powershell
 
 ---
 

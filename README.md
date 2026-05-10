@@ -41,6 +41,7 @@ This repository helps me:
 - JavaScript
 - Python
 - SQL
+- Shell
 
 ---
 

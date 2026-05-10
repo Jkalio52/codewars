@@ -10,7 +10,7 @@ This repository documents my journey through various Codewars exercises across m
 
 [Codewars](https://www.codewars.com/) is a platform that helps developers improve their coding skills through programming challenges called **kata**.
 
-Kata range from beginner-friendly exercises to advanced algorithm and data structure problems, covering topics such as:
+Kata range from beginner-friendly exercises to advanced algorithms and data structure problems, covering topics such as:
 
 - Algorithms
 - Data Structures

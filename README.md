@@ -68,6 +68,12 @@ codewars/
 - Continuous learning through challenge-based development
 - Focus on writing readable and optimized solutions
 
+## Kata Progress
+
+- 8 kyu: 40+
+- 7 kyu: 30+
+- 6 kyu: 15+
+
 ---
 
 ## Why This Repository Exists

@@ -49,6 +49,7 @@ device.decode = function (w) {
 
 
 
+
 /**
 // Help the general decode secret enemy messages solution 
 console.log (device.encode ('What is this ?'));

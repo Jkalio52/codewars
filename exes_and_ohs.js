@@ -50,12 +50,3 @@ function XO(str) {
   // If balance returns to 0, amounts were equal.
   return balance === 0;
 }
-
-
-// One-Liner (clean)
-// Extremely readable and easy to maintain
-function XO(str) {
-  const lower = str.toLowerCase();
-  // Split by 'x' and 'o' and compare the resulting array lengths
-  return lower.split('x').length === lower.split('o').length;
-}

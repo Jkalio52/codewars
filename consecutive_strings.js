@@ -1,5 +1,5 @@
 function longestConsec(strarr, k) {
-    // your code 
+    // your code
     if (strarr.length == 0 || k > strarr.length || k <= 0) return '';
 
     let longestString = '';

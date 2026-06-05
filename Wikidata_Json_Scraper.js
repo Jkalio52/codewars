@@ -24,6 +24,7 @@ Given the URL to our example, you should return:
   'LABEL': 'Douglas Adams',
   'DESCRIPTION': 'British science fiction writer and humorist (1952–2001)'
 }
+
 Be careful. Some information won't always be available in English, and some might not have a value associated with any language. That's because Wikidata only requires you to give one label or description. If the en label or description aren't included, put "No Label" or "No Description". Please be careful you are getting values from the "en" value, and not localized english versions such as "en-uk" or en-ca.
 
 If you were given the URL to this unhelpful entry, you would return the following:

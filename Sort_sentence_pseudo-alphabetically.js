@@ -5,7 +5,7 @@ All words that begin with a lowercase letter should be at the beginning of the s
 All words that begin with an uppercase letter should come after that, and should be sorted in descending order. 
 If a word appears multiple times in the sentence, it should be returned multiple times in the sorted sentence. Any punctuation must be discarded.
 
-Example:
+Example: 
 For example, given the input string "Land of the Old Thirteen! Massachusetts land! land of Vermont and Connecticut!", your method should return 
 "and land land of of the Vermont Thirteen Old Massachusetts Land Connecticut". 
 Lower case letters are sorted a -> l -> l -> o -> o -> t, and upper case letters are sorted V -> T -> O -> M -> L -> C.

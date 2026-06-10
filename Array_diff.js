@@ -24,24 +24,3 @@ function arrayDiff(a, b) {
   
   return diff.sort((a, b) => a - b);
 }
-
-
-
-
-
-
-//... 
-function arrayDiff(a, b) {
-  let diff = [];
-  for (let i = 0; i < a.length; i++) {
-    if (b.indexOf(a[i]) === -1) {
-      diff.push(a[i]);
-    }
-  }
-  for (i = 0; i < b.length; i++) {
-    if (a.indexOf(b[i]) === 1) {
-      diff.push(b[i]);
-    }
-  }
-  return diff;
-}

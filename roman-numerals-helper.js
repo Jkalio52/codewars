@@ -70,5 +70,5 @@ const RomanNumerals = {
 
 
 
-// The simplified refactor
+// The simplified refactor (June 2026)
 

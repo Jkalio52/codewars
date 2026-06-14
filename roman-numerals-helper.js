@@ -71,4 +71,7 @@ const RomanNumerals = {
 
 
 // The simplified refactor (June 2026)
+/**
+Here we leverage Array.entries(), reduce(), and for...of loops to make the code more declarative, readable, and less prone to the "index tracking" bugs
+*/
 

@@ -1,6 +1,6 @@
 /**
 Instructions: 
-You need to write a function f that returns the string Hello, world!.
+You need to write a function f that returns the string Hello, world!. 
 
 Requirement: Every line must have at most 2 characters, and total number of lines must be less than 40. 
 

@@ -1,6 +1,6 @@
 function humanReadable(seconds) {
   // TODO 
-  // Guard clause: Ensure the input is within a reasonable range (0 to 99:59:59)
+  // Guard clause: Ensure the input is within a reasonable range (0 to 99:59:59) 
   if (seconds < 0 || seconds > 359999) {
     return null;
   }

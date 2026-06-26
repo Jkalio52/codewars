@@ -1,5 +1,5 @@
 // Help the general decode secret enemy messages solution 
-// This first line is just testing the device's behavior
+// This first line is just testing the device's behavior 
 console.log(device.encode('What is this ?'));
 
 /**

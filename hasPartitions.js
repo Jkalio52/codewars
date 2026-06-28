@@ -22,7 +22,7 @@ Oops, please raise an issue about this broken image
 
 Oops, please raise an issue about this broken image
 
-oops, please raise an issue about this broken image
+Oops, please raise an issue about this broken image
 
 Notes:
 line segments are given as pairs of points

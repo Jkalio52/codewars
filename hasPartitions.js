@@ -34,7 +34,7 @@ Tests:
 100 random with up to 100 walls
 points and walls may exist outside of boundary walls. But any partitions formed outside do NOT count.
 
-the coordinate (width, height) is a corner of the room, and so is (0, 0).
+The coordinate (width, height) is a corner of the room, and so is (0, 0).
 
 reading the pictures: origin in the top left corner, x axis going to the right, and y axis going down.
 

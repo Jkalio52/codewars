@@ -59,3 +59,14 @@ function hasPartitions(width, height, walls) {
 }
 
 */
+
+
+// The Solution:
+
+/**
+ * Determines if walls split a rectangular room into separate partitions.
+ * @param {number} width - The width of the room.
+ * @param {number} height - The height of the room.
+ * @param {Array} walls - List of wall line segments [[p1, p2], ...]
+ * @returns {boolean} True if the room is divided, otherwise false.
+ */

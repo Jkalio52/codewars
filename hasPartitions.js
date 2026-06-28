@@ -31,7 +31,7 @@ Tests:
 50 fixed tests
 100 random tests with up to 8 walls
 100 random with up to 15 walls
-100 randrom with up to 100 walls
+100 random with up to 100 walls
 points and walls may exist outside of boundary walls. But any partitions formed outside do NOT count.
 
 the coordinate (width, height) is a corner of the room, and so is (0, 0).

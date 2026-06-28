@@ -73,100 +73,127 @@ function hasPartitions(width, height, walls) {
 function hasPartitions(width, height, walls) {
   const EPS = 1e-7;
 
-  // --- SECTION 1: GEOMETRIC UTILITIES ---
+  // --- SECTION 1: GEOMETRIC MATH HELPER UTILITIES ---
+  const samePoint = (p1, p2) => Math.abs(p1.x - p2.x) < EPS && Math.abs(p1.y - p2.y) < EPS;
 
-  const isBetween = (a, b, c) => c >= Math.min(a, b) - EPS && c <= Math.max(a, b) + EPS;
-  const crossProduct = (p1, p2, p3) => (p2.x - p1.x) * (p3.y - p1.y) - (p2.y - p1.y) * (p3.x - p1.x);
-
-  /**
-   * Clips a line segment to the room's boundaries using parametric scaling.
-   */
+  // Clips a wall segment so that it resides completely inside the room bounds
   function clipSegment(p1, p2) {
-    let x1 = p1.x, y1 = p1.y;
-    let x2 = p2.x, y2 = p2.y;
-
+    let x1 = p1.x, y1 = p1.y, x2 = p2.x, y2 = p2.y;
     if (Math.max(x1, x2) < -EPS || Math.min(x1, x2) > width + EPS || 
-        Math.max(y1, y2) < -EPS || Math.min(y1, y2) > height + EPS) {
-      return null;
-    }
+        Math.max(y1, y2) < -EPS || Math.min(y1, y2) > height + EPS) return null;
 
     let t0 = 0.0, t1 = 1.0;
     const dx = x2 - x1, dy = y2 - y1;
-
-    const checks = [
-      [-dx, x1],            // Left edge
-      [dx, width - x1],     // Right edge
-      [-dy, y1],            // Top edge
-      [dy, height - y1]     // Bottom edge
-    ];
+    const checks = [[-dx, x1], [dx, width - x1], [-dy, y1], [dy, height - y1]];
 
     for (const [p, q] of checks) {
       if (Math.abs(p) < EPS) {
         if (q < -EPS) return null;
       } else {
         const t = q / p;
-        if (p < 0) {
-          if (t > t0) t0 = t;
-        } else {
-          if (t < t1) t1 = t;
-        }
+        if (p < 0) { if (t > t0) t0 = t; } 
+        else { if (t < t1) t1 = t; }
       }
     }
-
     if (t0 > t1 + EPS) return null;
-
-    return [
-      { x: x1 + t0 * dx, y: y1 + t0 * dy },
-      { x: x1 + t1 * dx, y: y1 + t1 * dy }
-    ];
+    return [{ x: x1 + t0 * dx, y: y1 + t0 * dy }, { x: x1 + t1 * dx, y: y1 + t1 * dy }];
   }
 
-  /**
-   * Checks if two line segments intersect or touch.
-   */
-  function segmentsIntersect(seg1, seg2) {
+  // Locates the precise coordinates where two segment paths intersect
+  function getIntersection(seg1, seg2) {
     const [p1, p2] = seg1;
     const [p3, p4] = seg2;
+    const d = (p2.x - p1.x) * (p4.y - p3.y) - (p2.y - p1.y) * (p4.x - p3.x);
+    if (Math.abs(d) < EPS) return null;
 
-    const cp1 = crossProduct(p3, p4, p1);
-    const cp2 = crossProduct(p3, p4, p2);
-    const cp3 = crossProduct(p1, p2, p3);
-    const cp4 = crossProduct(p1, p2, p4);
+    const u = ((p3.x - p1.x) * (p4.y - p3.y) - (p3.y - p1.y) * (p4.x - p3.x)) / d;
+    const v = ((p3.x - p1.x) * (p2.y - p1.y) - (p3.y - p1.y) * (p2.x - p1.x)) / d;
 
-    if (((cp1 > EPS && cp2 < -EPS) || (cp1 < -EPS && cp2 > EPS)) &&
-        ((cp3 > EPS && cp4 < -EPS) || (cp3 < -EPS && cp4 > EPS))) {
-      return true;
+    if (u >= -EPS && u <= 1 + EPS && v >= -EPS && v <= 1 + EPS) {
+      return { x: p1.x + u * (p2.x - p1.x), y: p1.y + u * (p2.y - p1.y) };
     }
-
-    if (Math.abs(cp1) <= EPS && isBetween(p3.x, p4.x, p1.x) && isBetween(p3.y, p4.y, p1.y)) return true;
-    if (Math.abs(cp2) <= EPS && isBetween(p3.x, p4.x, p2.x) && isBetween(p3.y, p4.y, p2.y)) return true;
-    if (Math.abs(cp3) <= EPS && isBetween(p1.x, p2.x, p3.x) && isBetween(p1.y, p2.y, p3.y)) return true;
-    if (Math.abs(cp4) <= EPS && isBetween(p1.x, p2.x, p4.x) && isBetween(p1.y, p2.y, p4.y)) return true;
-
-    return false;
+    return null;
   }
 
-  // --- SECTION 2: WALL FILTERING & PACKING ---
+  // Verifies if a single vertex point rests directly along a line segment vector
+  function isPointOnSegment(pt, seg) {
+    const [p1, p2] = seg;
+    const cross = (p2.x - p1.x) * (pt.y - p1.y) - (p2.y - p1.y) * (pt.x - p1.x);
+    if (Math.abs(cross) > EPS) return false;
+    return pt.x >= Math.min(p1.x, p2.x) - EPS && pt.x <= Math.max(p1.x, p2.x) + EPS &&
+           pt.y >= Math.min(p1.y, p2.y) - EPS && pt.y <= Math.max(p1.y, p2.y) + EPS;
+  }
 
-  const validWalls = [];
+  // --- SECTION 2: GRAPH SEGMENT POPULATION ---
+  const segments = [
+    [{ x: 0, y: 0 }, { x: width, y: 0 }],
+    [{ x: width, y: 0 }, { x: width, y: height }],
+    [{ x: width, y: height }, { x: 0, y: height }],
+    [{ x: 0, y: height }, { x: 0, y: 0 }]
+  ];
+
   for (const w of walls) {
-    // FIX 1: Passed individual endpoints of the wall segment array explicitly
-    const clipped = clipSegment(w[0], w[1]); 
+    const clipped = clipSegment(w[0], w[1]);
     if (clipped) {
-      // FIX 2: Fixed property indexing syntax to evaluate real distance differences
-      const dist = Math.hypot(clipped[0].x - clipped[1].x, clipped[0].y - clipped[1].y);
-      if (dist > EPS) {
-        validWalls.push(clipped);
+      if (Math.hypot(clipped[0].x - clipped[1].x, clipped[0].y - clipped[1].y) > EPS) {
+        segments.push(clipped);
       }
     }
   }
 
-  const n = validWalls.length;
-  if (n === 0) return false;
+  // Find all structural vertex intersection points
+  const points = [];
+  for (let i = 0; i < segments.length; i++) {
+    for (let j = i + 1; j < segments.length; j++) {
+      const pt = getIntersection(segments[i], segments[j]);
+      if (pt) points.push(pt);
+    }
+    points.push(segments[i][0], segments[i][1]);
+  }
 
-  // --- SECTION 3: DISJOINT SET UNION (DSU) UNIFICATION ---
+  // Filter out any duplicate points within the precision tolerance threshold
+  const uniquePoints = [];
+  for (const p of points) {
+    if (!uniquePoints.some(u => samePoint(p, u))) {
+      uniquePoints.push(p);
+    }
+  }
 
-  const parent = Array.from({ length: n }, (_, i) => i);
+  // --- SECTION 3: ATOMIC EDGE SUBDIVISION ---
+  const edgesMap = new Set();
+
+  for (const seg of segments) {
+    // Isolate every unique point resting along the path of this specific segment
+    const onSegment = uniquePoints.filter(p => isPointOnSegment(p, seg));
+
+    // Sort the points sequentially along the direction of the vector line
+    if (Math.abs(seg[0].x - seg[1].x) > Math.abs(seg[0].y - seg[1].y)) {
+      onSegment.sort((a, b) => a.x - b.x);
+    } else {
+      onSegment.sort((a, b) => a.y - b.y);
+    }
+
+    // Connect adjacent ordered points on the line together into atomic non-overlapping edges
+    for (let i = 0; i < onSegment.length - 1; i++) {
+      const pA = onSegment[i];
+      const pB = onSegment[i + 1];
+
+      if (!samePoint(pA, pB)) {
+        const idxA = uniquePoints.findIndex(u => samePoint(pA, u));
+        const idxB = uniquePoints.findIndex(u => samePoint(pB, u));
+        
+        // Save the edge configuration using an ordered string identity to ensure strict uniqueness
+        const key = idxA < idxB ? `${idxA}-${idxB}` : `${idxB}-${idxA}`;
+        edgesMap.add(key);
+      }
+    }
+  }
+
+  // --- SECTION 4: DISJOINT SET UNION (DSU) NETWORK MAPPING ---
+  const V = uniquePoints.length;
+  const E = edgesMap.size;
+
+  const parent = Array.from({ length: V }, (_, i) => i);
   function find(i) {
     if (parent[i] === i) return i;
     parent[i] = find(parent[i]);
@@ -178,68 +205,24 @@ function hasPartitions(width, height, walls) {
     if (rootI !== rootJ) parent[rootI] = rootJ;
   }
 
-  for (let i = 0; i < n; i++) {
-    for (let j = i + 1; j < n; j++) {
-      if (segmentsIntersect(validWalls[i], validWalls[j])) {
-        union(i, j);
-      }
-    }
+  for (const edgeStr of edgesMap) {
+    const [u, v] = edgeStr.split('-').map(Number);
+    union(u, v);
   }
 
-  // --- SECTION 4: CLOCKWISE PERIMETER POSITION MAPPING ---
-
-  /**
-   * Translates a 2D boundary coordinate into a linear distance tracking 
-   * clockwise around the room perimeter starting at the top-left (0,0).
-   */
-  function getPerimeterDistance(p) {
-    if (Math.abs(p.y) <= EPS) return p.x;                        
-    if (Math.abs(p.x - width) <= EPS) return width + p.y;         
-    if (Math.abs(p.y - height) <= EPS) return width + height + (width - p.x); 
-    if (Math.abs(p.x) <= EPS) return width + height + width + (height - p.y); 
-    return -1;
+  // Count the total number of disconnected structural component networks
+  const uniqueRoots = new Set();
+  for (let i = 0; i < V; i++) {
+    uniqueRoots.add(find(i));
   }
+  const C = uniqueRoots.size;
 
-  const componentPointsMap = new Map();
+  // --- SECTION 5: EULER PLANAR FACE VALIDATION ---
+  // Calculates total separate faces inside + outside: F = E - V + 1 + C
+  const totalFaces = E - V + 1 + C;
 
-  for (let i = 0; i < n; i++) {
-    const root = find(i);
-    if (!componentPointsMap.has(root)) {
-      componentPointsMap.set(root, []);
-    }
-    const list = componentPointsMap.get(root);
-
-    for (const pt of validWalls[i]) {
-      const dist = getPerimeterDistance(pt);
-      if (dist >= 0) {
-        if (!list.some(existingDist => Math.abs(existingDist - dist) < EPS)) {
-          list.push(dist);
-        }
-      }
-    }
-  }
-
-  // --- SECTION 5: GEOMETRIC PARTITION EVALUATION ---
-
-  const totalPerimeter = 2 * (width + height);
-
-  for (const [root, distances] of componentPointsMap.entries()) {
-    if (distances.length < 2) continue;
-
-    distances.sort((a, b) => a - b);
-
-    for (let k = 0; k < distances.length; k++) {
-      const current = distances[k];
-      const next = distances[(k + 1) % distances.length];
-      
-      let gap = next - current;
-      if (gap < -EPS) gap += totalPerimeter; 
-
-      if (gap > EPS && (totalPerimeter - gap) > EPS) {
-        return true;
-      }
-    }
-  }
-
-  return false;
+  // An open room with 0 walls has 2 faces (1 outside, 1 inside).
+  // If totalFaces is greater than 2, it is guaranteed to have 2 or more partitions.
+  return totalFaces > 2;
 }
+

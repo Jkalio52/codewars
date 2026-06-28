@@ -18,7 +18,7 @@ true if the walls divide the room into two or more partitions, otherwise false.
 
 
 Examples
-oops, please raise an issue about this broken image
+Oops, please raise an issue about this broken image
 
 oops, please raise an issue about this broken image
 

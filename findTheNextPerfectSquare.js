@@ -7,7 +7,7 @@ function findNextSquare(sq) {
   
   // Check if the square root is a whole number. 
   // The modulo operator (%) returns the remainder. 
-  // If a number divided by 1 has 0 remainder, it's an integer.
+  // If a number divided by 1 has 0 remainder, it's an integer. 
   if (Math.sqrt(sq) % 1 === 0) {
     square = Math.sqrt(sq);   // Calculate the root (e.g., if sq is 121, square is 11)
     nextSquare = square + 1;  // Increment the root (11 becomes 12)

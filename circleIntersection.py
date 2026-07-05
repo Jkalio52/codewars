@@ -20,3 +20,5 @@
 # Solution (starting code): 
 # circleIntersection=(a,b,r)=>//coding and coding.. shorter and more shorter..  good luck! ;-) 
 
+code = "circleIntersection=(a,b,r)=>([[x,y],[m,n]]=[a,b],X=Math.hypot(x-m,y-n)/2/r)>1?0:r*r*(2*Math.acos(X)-2*X*Math.sqrt(1-X*X))|0"
+print(len(code))

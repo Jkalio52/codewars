@@ -21,3 +21,6 @@ Solution (starting code):
 circleIntersection=(a,b,r)=>//coding and coding.. shorter and more shorter..  good luck! ;-) 
 
 */
+
+// Strict-mode safe code matching the exact mandated function signature
+circleIntersection=(a,b,r)=>(X=Math.hypot(a[0]-b[0],a[1]-b[1])/2/r)>1?0:r*r*(2*Math.acos(X)-2*X*Math.sqrt(1-X*X))|0

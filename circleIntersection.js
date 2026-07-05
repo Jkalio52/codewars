@@ -5,7 +5,7 @@ Task:
 Given two congruent circles a and b of radius r, return the area of their intersection rounded down to the nearest integer.
 
 Code Limit:
-Javascript: Less than 94 characters.
+JavaScript: Less than 94 characters.
 
 Python: Less than 128 characters.
 

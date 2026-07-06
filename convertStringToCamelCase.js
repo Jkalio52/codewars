@@ -1,6 +1,6 @@
 /**
  * Converts a dash or underscore-delimited string to camelCase. 
- * Example: "the-stealth-warrior" -> "theStealthWarrior"
+ * Example: "the-stealth-warrior" -> "theStealthWarrior" 
  */
 function toCamelCase(str) {
   // Matches a hyphen or underscore followed by a word character.

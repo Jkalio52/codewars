@@ -1,7 +1,7 @@
 /**
 # Instructions: 
 
-Task:
+Task: 
 Given two congruent circles a and b of radius r, return the area of their intersection rounded down to the nearest integer.
 
 Code Limit:

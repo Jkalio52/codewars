@@ -1,6 +1,6 @@
 function listPosition(word) {
   let obj = {}; // Maps unique characters to an index 
-  let counter = []; // Stores the frequency of each unique character
+  let counter = []; // Stores the frequency of each unique character 
   let counts = 0;
 
   // Pre-process: Identify unique characters in alphabetical order

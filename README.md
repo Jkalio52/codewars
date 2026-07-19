@@ -1,6 +1,6 @@
 # Codewars Challenges
 
-A collection of my completed Codewars kata solutions used to sharpen problem-solving, algorithmic thinking, and software development skills.
+A collection of my completed Codewars kata solutions used to sharpen problem-solving, algorithmic thinking, and software development skills. 
 
 This repository documents my journey through various Codewars exercises across multiple difficulty levels and programming concepts.
 

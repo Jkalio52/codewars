@@ -27,5 +27,5 @@ function validate(password) {
     }
 
     return count >= 3;
-  //return /(put answer here)/.test(password); 
+  //return /(put answer here)/.test(password);
 }

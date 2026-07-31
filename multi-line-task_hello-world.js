@@ -2,7 +2,7 @@
 Instructions: 
 You need to write a function f that returns the string Hello, world!. 
 
-Requirement: Every line must have at most 2 characters, and total number of lines must be less than 40. 
+Requirement: Every line must have at most 2 characters, and the total number of lines must be less than 40. 
 
 Hint: It's possible to complete this in 28 lines only. 
 

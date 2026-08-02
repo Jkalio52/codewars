@@ -11,6 +11,7 @@ function isPrime(num) {
 
 
 
+
 /**
 -The Modern Refactor
 * Optimized Primality Test

@@ -5,7 +5,7 @@ function isPrime(num) {
     // If 'num' is divisible by 'i' with no remainder, it's not prime 
     if (num % i === 0) return false;
 
-  // Primes must be greater than 1
+  // Primes must be greater than 1 
   return num > 1;
 }
 

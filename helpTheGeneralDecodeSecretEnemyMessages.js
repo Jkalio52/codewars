@@ -5,7 +5,7 @@ console.log(device.encode('What is this ?'));
 /**
  * The strategy here is to build a lookup table by encoding strings of 
  * repeating characters to see how the 'device' transforms them 
- * at specific string indices.
+ * at specific string indices. 
  */
 const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz,.? -';
 

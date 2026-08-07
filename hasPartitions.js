@@ -14,7 +14,7 @@ walls - A list of line segments
 
 
 Output
-true if the walls divide the room into two or more partitions, otherwise false.
+true if the walls divide the room into two or more partitions; otherwise false.
 
 
 Examples

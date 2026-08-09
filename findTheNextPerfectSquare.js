@@ -22,6 +22,7 @@ function findNextSquare(sq) {
 
 
 
+
 /** 
 Using Number.isInteger() for a more readable check
 */

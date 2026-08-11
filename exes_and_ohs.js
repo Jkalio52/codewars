@@ -13,7 +13,7 @@ function XO(str) {
   let x = [];
   let o = [];
   
-  // Iterate over every character in the string
+  // Iterate over every character in the string 
   for (let i = 0; i < str.length; i++) {
     // Check for 'x', case-insensitive
     if (str[i].toLowerCase() === "x") {

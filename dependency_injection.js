@@ -1,5 +1,5 @@
 /**
- * Constructor DependencyInjector 
+ * Constructor DependencyInjector
  * @param {Object} - object with dependencies 
  */
 var DI = function (dependency) {

@@ -40,7 +40,7 @@ function ipsBetween(start, end) {
   // Helper to convert an IP string to a single numeric value 
   const ipToLong = (ip) => {
     return ip.split('.').reduce((accumulator, octet) => {
-      // Shift the current total by 8 bits (multiply by 256) and add the new octet
+      // Shift the current total by 8 bits (multiply by 256) and add the new octet 
       return (accumulator * 256) + Number(octet);
     }, 0);
   };

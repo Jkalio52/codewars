@@ -3,7 +3,7 @@
  * Example: "the-stealth-warrior" -> "theStealthWarrior" 
  */
 function toCamelCase(str) {
-  // Matches a hyphen or underscore followed by a word character.
+  // Matches a hyphen or underscore followed by a word character. 
   // Flags: 'i' (ignore case), 'g' (global/all occurrences).
   const regExp = /[-_]\w/ig; 
 

@@ -18,7 +18,7 @@ add(1);
 
 /** Updated */ 
 function add(n) {
-  // Let the currying begin!
+  // Let the currying begin! 
   // This inner function captures 'n' in its closure
   const self = function(m) {
     // When called, it returns a NEW instance of add with the updated sum

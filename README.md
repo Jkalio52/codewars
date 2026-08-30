@@ -87,3 +87,4 @@ This project serves as both:
 ## Connect With Me
 
 GitHub: https://github.com/Jkalio52
+GitLab: https://gitlab.com/Jkalio52/jkalio52

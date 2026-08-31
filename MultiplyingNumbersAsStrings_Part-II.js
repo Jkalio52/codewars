@@ -1,7 +1,7 @@
 /**
 Multiplying numbers as strings: Part II
 
-This is the Part II of Multiplying numbers as strings.
+This is Part II of Multiplying numbers as strings.
 
 TODO
 Multiply two numbers! Simple!

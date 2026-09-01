@@ -1,6 +1,6 @@
 /**
 Instructions: 
-The cuckoo bird pops out of the cuckoo clock and chimes once on the quarter hour, half hour, and three-quarter hour. At the beginning of each hour (1-12), it chimes out the hour. Given the current time and a positive integer n, determine the time when the cuckoo bird has chimed n times.
+The cuckoo bird pops out of the cuckoo clock and chimes once on the quarter hour, half hour, and three-quarter hour. At the beginning of each hour (1-12), it chimes out the hour. Given the current time and a positive integer n, determine the time when the cuckoo bird has chimed n times. 
 
 Inputs:
 initial_time - a string in the format "HH:MM", where 1 ≤ HH ≤ 12 and 0 ≤ MM ≤ 59, with leading 0’s if necessary.

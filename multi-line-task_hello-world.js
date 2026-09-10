@@ -8,7 +8,7 @@ Hint: It's possible to complete this in 28 lines only.
 
 
 Solution: 
-f=_=>//coding and coding.. shorter and more shorter..
+f=_=>//coding and coding... shorter and more shorter..
 
 
 Sample Tests: 

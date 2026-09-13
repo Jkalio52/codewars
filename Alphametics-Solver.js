@@ -130,4 +130,10 @@ function alphametics(equation) {
 
 
 // Solution #2 
-// Optimized Solution Code
+// Optimized Solution Code 
+/*
+Includes: 
+ - Early Failure Detection
+ - Pre-Indexed Matrix (columns) 
+ - No Frozen Prototype Exploits
+*/

@@ -124,3 +124,10 @@ function alphametics(equation) {
 
   return "";
 }
+
+
+
+
+
+// Solution #2 
+// Optimized Solution Code

@@ -5,7 +5,7 @@ IPs should be considered valid if they consist of four octets, with values betwe
 
 Valid input examples: 
 Examples of valid inputs: 
-1.2.3.4
+1.2.3.4 
 123.45.67.89
 
 Invalid input examples:

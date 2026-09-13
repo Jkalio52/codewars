@@ -42,3 +42,85 @@ If you enjoyed this kata, be sure to check out my other katas
 Tags: Puzzles Performance Cryptography Algorithms
 
 */
+
+function alphametics(equation) {
+  // Extract all words using a regular expression
+  const words = equation.match(/[A-Z]+/g);
+  
+  // Find all unique characters
+  const uniqueChars = Array.from(new Set(words.join('')));
+  
+  // Track letters that cannot be zero (leading characters of words with length > 1)
+  const leadingChars = new Set();
+  for (const word of words) {
+    if (word.length > 1) {
+      leadingChars.add(word[0]);
+    }
+  }
+
+  // Split the equation into left (summands) and right (target) sides
+  const [leftSide, rightSide] = equation.split('=');
+  const leftWords = leftSide.match(/[A-Z]+/g);
+  const rightWord = rightSide.match(/[A-Z]+/g)[0];
+
+  // Calculate the net coefficient for each character
+  const charCoeffs = {};
+  for (const char of uniqueChars) {
+    charCoeffs[char] = 0;
+  }
+
+  // Add weights for the left side
+  for (const word of leftWords) {
+    for (let i = 0; i < word.length; i++) {
+      const char = word[word.length - 1 - i];
+      charCoeffs[char] += Math.pow(10, i);
+    }
+  }
+
+  // Subtract weights for the right side
+  for (let i = 0; i < rightWord.length; i++) {
+    const char = rightWord[rightWord.length - 1 - i];
+    charCoeffs[char] -= Math.pow(10, i);
+  }
+
+  // Sort characters by absolute coefficient descending to prune bad branches early
+  const sortedChars = uniqueChars.sort((a, b) => Math.abs(charCoeffs[b]) - Math.abs(charCoeffs[a]));
+
+  const usedDigits = new Array(10).fill(false);
+  const charToDigit = {};
+
+  // Backtracking function
+  function backtrack(idx, currentSum) {
+    if (idx === sortedChars.length) {
+      return currentSum === 0;
+    }
+
+    const char = sortedChars[idx];
+    const coeff = charCoeffs[char];
+    const startDigit = leadingChars.has(char) ? 1 : 0;
+
+    for (let d = startDigit; d <= 9; d++) {
+      if (!usedDigits[d]) {
+        usedDigits[d] = true;
+        charToDigit[char] = d;
+
+        if (backtrack(idx + 1, currentSum + coeff * d)) {
+          return true;
+        }
+
+        // Backtrack
+        usedDigits[d] = false;
+        delete charToDigit[char];
+      }
+    }
+    return false;
+  }
+
+  // Run the solver
+  if (backtrack(0, 0)) {
+    // Replace characters in the original equation with their matched digits
+    return equation.replace(/[A-Z]/g, match => charToDigit[match]);
+  }
+
+  return "";
+}

@@ -1,5 +1,5 @@
 /*
-# Instructions:
+# Instructions: 
 
 Alphametics is a type of cryptarithm in which a set of words is written down in the form of a long addition sum or some other mathematical problem. The objective is to replace the letters of the alphabet with decimal digits to make a valid arithmetic sum.
 

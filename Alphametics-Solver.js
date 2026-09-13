@@ -137,3 +137,127 @@ Includes:
  - Pre-Indexed Matrix (columns) 
  - No Frozen Prototype Exploits
 */
+
+function alphametics(equation) {
+    // 1. Parse the equation into summands and the target result
+    const [leftSide, rightSide] = equation.split(' = ');
+    const summands = leftSide.split(' + ');
+    const result = rightSide;
+
+    // 2. Track unique letters and constraints
+    const lettersSet = new Set();
+    const leadingLetters = new Set();
+
+    for (const word of [...summands, result]) {
+        leadingLetters.add(word[0]);
+        for (const char of word) {
+            lettersSet.add(char);
+        }
+    }
+
+    const uniqueLetters = Array.from(lettersSet);
+    if (uniqueLetters.length > 10) return null; // Edge case safety
+
+    // Lookup objects for backtracking state
+    const letterToDigit = {};
+    const digitToLetter = Array(10).fill(null);
+
+    // 3. Pre-calculate structural column data to avoid string indexing overhead
+    const maxLen = Math.max(...summands.map(s => s.length), result.length);
+    const columns = [];
+
+    for (let colIdx = 0; colIdx < maxLen; colIdx++) {
+        const summandChars = [];
+        for (const summand of summands) {
+            if (summand.length > colIdx) {
+                // Read right-to-left
+                summandChars.push(summand[summand.length - 1 - colIdx]);
+            }
+        }
+        const resultChar = result.length > colIdx ? result[result.length - 1 - colIdx] : null;
+        columns.push({ summandChars, resultChar });
+    }
+
+    // 4. Backtracking function processing column-by-column
+    function solve(colIdx, summandCharIdx, currentSum, carry) {
+        // If we processed all columns, check if there is any leftover carry
+        if (colIdx === columns.length) {
+            return carry === 0;
+        }
+
+        const { summandChars, resultChar } = columns[colIdx];
+
+        // Step A: Assign digits to all summands in the current column
+        if (summandCharIdx < summandChars.length) {
+            const char = summandChars[summandCharIdx];
+            
+            if (letterToDigit[char] !== undefined) {
+                // Character already assigned, move to the next summand char in this column
+                return solve(colIdx, summandCharIdx + 1, currentSum + letterToDigit[char], carry);
+            }
+
+            // Try assigning an available digit
+            const startDigit = leadingLetters.has(char) ? 1 : 0;
+            for (let d = startDigit; d <= 9; d++) {
+                if (digitToLetter[d] === null) {
+                    // Make assignment
+                    letterToDigit[char] = d;
+                    digitToLetter[d] = char;
+
+                    if (solve(colIdx, summandCharIdx + 1, currentSum + d, carry)) {
+                        return true;
+                    }
+
+                    // Backtrack
+                    letterToDigit[char] = undefined;
+                    digitToLetter[d] = null;
+                }
+            }
+            return false;
+        }
+
+        // Step B: All summands in this column are processed, now evaluate the result character
+        const totalSum = currentSum + carry;
+        const targetDigit = totalSum % 10;
+        const nextCarry = Math.floor(totalSum / 10);
+
+        if (resultChar === null) {
+            // Result word is shorter than the current column index
+            return totalSum === 0 && solve(colIdx + 1, 0, 0, nextCarry);
+        }
+
+        if (letterToDigit[resultChar] !== undefined) {
+            // Result character is already assigned
+            if (letterToDigit[resultChar] === targetDigit) {
+                return solve(colIdx + 1, 0, 0, nextCarry);
+            }
+            return false;
+        } else {
+            // Result character is unassigned; try assigning targetDigit to it
+            if (digitToLetter[targetDigit] !== null) return false; // Digit taken
+            if (targetDigit === 0 && leadingLetters.has(resultChar)) return false; // No leading zeros
+
+            // Make assignment
+            letterToDigit[resultChar] = targetDigit;
+            digitToLetter[targetDigit] = resultChar;
+
+            if (solve(colIdx + 1, 0, 0, nextCarry)) {
+                return true;
+            }
+
+            // Backtrack
+            letterToDigit[resultChar] = undefined;
+            digitToLetter[targetDigit] = null;
+            return false;
+        }
+    }
+
+    // Kick off backtracking from column 0, summand char 0, sum 0, carry 0
+    if (solve(0, 0, 0, 0)) {
+        // Construct the solution string using our mapping
+        return equation.replace(/[A-Z]/g, char => letterToDigit[char]);
+    }
+
+    return null;
+}
+

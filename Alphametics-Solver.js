@@ -137,7 +137,6 @@ Includes:
  - Pre-Indexed Matrix (columns) 
  - No Frozen Prototype Exploits
 */
-
 function alphametics(equation) {
     // 1. Parse the equation into summands and the target result
     const [leftSide, rightSide] = equation.split(' = ');

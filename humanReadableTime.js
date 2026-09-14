@@ -7,7 +7,7 @@ function humanReadable(seconds) {
 
   // 1. Calculate Hours: 3600 seconds in an hour 
   let hours = Math.floor(seconds / 3600);
-  // Remove the hours we just calculated from the total seconds pool
+  // Remove the hours we just calculated from the total seconds pool 
   seconds -= hours * 3600;
   // Manual Padding: Add leading zero if hours is a single digit
   if (hours < 10) {

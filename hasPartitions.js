@@ -25,7 +25,7 @@ Oops, please raise an issue about this broken image
 Oops, please raise an issue about this broken image
 
 Notes:
-line segments are given as pairs of points
+Line segments are given as pairs of points
 
 Tests:
 50 fixed tests

@@ -15,7 +15,7 @@ function XO(str) {
   
   // Iterate over every character in the string 
   for (let i = 0; i < str.length; i++) {
-    // Check for 'x', case-insensitive
+    // Check for 'x', case-insensitive 
     if (str[i].toLowerCase() === "x") {
       x.push(str[i]); // Store the character
     } 

@@ -31,7 +31,7 @@ function ipsBetween(start, end) {
 
 
 /**
-The Refactor
+The Refactor 
  * Calculates the number of IP addresses between start and end (exclusive of end). 
  * Treats IPv4 addresses as 32-bit integers for precision and simplicity. 
 */

@@ -7,7 +7,7 @@ function toCamelCase(str) {
   // Flags: 'i' (ignore case), 'g' (global/all occurrences). 
   const regExp = /[-_]\w/ig; 
 
-  // String.replace() calls the callback for every match found.
+  // String.replace() calls the callback for every match found. 
   return str.replace(regExp, function(match) {
     // 'match' will be strings like "-s" or "_w".
     // .charAt(1) picks the letter after the delimiter and uppercases it.

@@ -4,7 +4,7 @@
  */
 function toCamelCase(str) {
   // Matches a hyphen or underscore followed by a word character. 
-  // Flags: 'i' (ignore case), 'g' (global/all occurrences).
+  // Flags: 'i' (ignore case), 'g' (global/all occurrences). 
   const regExp = /[-_]\w/ig; 
 
   // String.replace() calls the callback for every match found.

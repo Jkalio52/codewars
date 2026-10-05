@@ -1,5 +1,5 @@
 function validateBattlefield(field) {
-  // write your magic here
+  // write your magic here 
   let hit = (horizontal, vertical) => (horizontal < 0 || vertical < 0 || horizontal > 9 || vertical > 9) ? 0 : field[horizontal][vertical];
   for (var ships = [10, 0, 0, 0, 0], horizontal = 0; horizontal < 10; horizontal++) {
     for (var vertical = 0; vertical < 10; vertical++) {

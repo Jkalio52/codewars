@@ -36,3 +36,9 @@ function duplicateCount(text) {
     return duplicateCounter;
 }
 
+
+
+
+/*
+Alternative Compact Approach -- Using ES6 Sets
+*/

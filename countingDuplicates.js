@@ -44,3 +44,10 @@ Alternative Compact Approach -- Using ES6 Sets.
 
 Because I prefer a shorter, more functional layout, I can utilize the Set object to automatically isolate unique characters.
 */
+function duplicateCount(text) {
+    const lowerText = text.toLowerCase().split('');
+    return [...new Set(lowerText)].filter(char => 
+        lowerText.indexOf(char) !== lowerText.lastIndexOf(char)
+    ).length;
+}
+

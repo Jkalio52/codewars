@@ -16,3 +16,23 @@ Example
 StringsFundamentals
 */
 
+function duplicateCount(text) {
+    // 1. Convert the entire string to lowercase to handle case-insensitivity
+    const lowerText = text.toLowerCase();
+    
+    // 2. Track the character frequencies in an object lookup map
+    const charCounts = {};
+    let duplicateCounter = 0;
+    
+    for (const char of lowerText) {
+        charCounts[char] = (charCounts[char] || 0) + 1;
+        
+        // 3. Increment the counter exactly when a character is found a second time
+        if (charCounts[char] === 2) {
+            duplicateCounter++;
+        }
+    }
+    
+    return duplicateCounter;
+}
+

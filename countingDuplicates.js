@@ -40,5 +40,7 @@ function duplicateCount(text) {
 
 
 /*
-Alternative Compact Approach -- Using ES6 Sets
+Alternative Compact Approach -- Using ES6 Sets. 
+
+Because I prefer a shorter, more functional layout, I can utilize the Set object to automatically isolate unique characters.
 */

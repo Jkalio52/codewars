@@ -1,6 +1,6 @@
 /**
 Background: 
-Wikidata is a public database with over a hundred million entries in it. You can find almost anything documented, from scientific articles to new species scientists have found.
+Wikidata is a public database with over a hundred million entries in it. You can find almost anything documented, from scientific articles to new species scientists have found. 
 
 To help developers use the site better, the website provides accessible JSON data for every submitted item. Today, you are going to program something that can read that data.
 

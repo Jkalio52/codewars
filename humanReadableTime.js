@@ -9,7 +9,7 @@ function humanReadable(seconds) {
   let hours = Math.floor(seconds / 3600);
   // Remove the hours we just calculated from the total seconds pool 
   seconds -= hours * 3600;
-  // Manual Padding: Add leading zero if hours is a single digit
+  // Manual Padding: Add leading zero if hours is a single digit 
   if (hours < 10) {
     hours = '0' + hours;
   }

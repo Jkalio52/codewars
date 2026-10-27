@@ -14,7 +14,7 @@ device.decode = function (w) {
   let wrdfinder = {};
   
   // STEP 1: Build the 'Rainbow Table' 
-  // We iterate through every possible character in our known alphabet
+  // We iterate through every possible character in our known alphabet 
   for (let y = 0; y < chars.length; y++) {
     let code = '';
     

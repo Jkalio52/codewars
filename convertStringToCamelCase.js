@@ -1,5 +1,5 @@
 /**
- * Converts a dash or underscore-delimited string to camelCase. 
+ * Converts a dash- or underscore-delimited string to camelCase. 
  * Example: "the-stealth-warrior" -> "theStealthWarrior" 
  */
 function toCamelCase(str) {

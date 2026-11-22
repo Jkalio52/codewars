@@ -1,5 +1,5 @@
 /**
-Multiplying numbers as strings: Part II
+Multiplying numbers as strings: Part II 
 
 This is Part II of Multiplying numbers as strings.
 
